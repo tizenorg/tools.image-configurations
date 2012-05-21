@@ -1,0 +1,6 @@
+mkdir -p /opt/home/app
+chown app: /opt/home/app
+mkdir -p /home
+mkdir -p /opt/home/root
+ln -s /opt/home/app /home/app
+ln -sf /opt/home/root /root

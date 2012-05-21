@@ -1,0 +1,3 @@
+sed -i s/ENGINE=gl/ENGINE=fb/ /etc/profile.d/menu-screen.sh
+
+echo "s1:12345:respawn:/sbin/agetty -L 115200 ttyMFD3 vt100" >> /etc/inittab

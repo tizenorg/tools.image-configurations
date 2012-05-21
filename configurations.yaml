@@ -1,0 +1,50 @@
+ExternalConfigs:
+  - lb
+  - handset
+
+Default:
+    Baseline: tizen-0.0
+    FileSystem: ext3
+    Active: True
+    Language: en_US.UTF-8
+    Keyboard: us
+    SaveRepos:  True
+    Timezone: America/Los_Angeles
+    RootPass: tizen
+    DefaultUser: tizen
+    DefaultUserPass: tizen
+    PartSize: 1900
+    BootloaderOptions: ""
+
+LB:
+    Part: tizen-arm
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: armv7l
+    Mic2Options: -f loop --taring-to=@NAME@-rs.tar --compress-disk-image=gz
+    Repos:
+        - Tizen-1.0-main
+        - Tizen-1.0-base
+Handset:
+    PartSize: 1024
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Architecture: ia32
+    Desktop: None
+    Groups:
+        - Base System
+        - Base X Server
+        - Tizen UI
+        - Tizen APIs
+    Repos:
+        - Tizen-1.0-base
+        - Tizen-1.0-main
+#- Tizen-1.0-base-debug
+#- Tizen-1.0-main-debug

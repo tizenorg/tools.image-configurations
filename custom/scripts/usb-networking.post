@@ -1,0 +1,8 @@
+# enable USB networking with IP address 192.168.1.1 by default
+cat >/etc/rc.d/rc3.d/S99usbnet.sh <<END
+#!/bin/sh
+echo rndis > /sys/class/android_usb/android0/functions
+echo 1 > /sys/class/android_usb/android0/enable
+ifconfig rndis0 192.168.100.1
+END
+chmod 777 /etc/rc.d/rc3.d/S99usbnet.sh

@@ -1,0 +1,57 @@
+echo 'kickstart post script start'
+if [ -d /etc/init.d ]; then
+    cp /etc/init.d/* /etc/rc.d/init.d/ -rdf
+fi
+rm -rf /etc/init.d*
+ln -sf /etc/rc.d/init.d /etc/init.d
+
+# Without this line the rpm don't get the architecture right.
+echo -n 'armv7l-meego-linux' > /etc/rpm/platform
+
+ssh-keygen -t rsa1 -f /etc/ssh/ssh_host_key -N ""
+ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N ""
+ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ""
+
+ail_initdb
+/opt/apps/com.samsung.menu-screen/bin/menuscreen_initdb
+
+cat > /usr/bin/press << EOF
+#!/bin/sh
+
+JUNK="SLP"
+
+[ "\$1" ] && TIMEOUT="\$1" || TIMEOUT="1"
+
+echo "Press return key to stop scripts"
+read -t \$TIMEOUT JUNK
+exit \$?
+EOF
+chmod +x /usr/bin/press
+
+ln -s /opt/etc/X11/xkb /usr/share/X11
+
+echo "UDEV_PERSISTENT_STORAGE=no" >> /etc/sysconfig/udev
+
+rm -rf /usr/include
+rm -rf /usr/share/man
+rm -rf /usr/share/doc
+
+MAJOR="2"
+MINOR="0"
+cat >/etc/info.ini <<EOF
+[Version]
+Major=$MAJOR;
+Minor=$MINOR;
+Build=TIZEN_`date +%Y%m%d`_1;
+Order=;
+[Build]
+Date=`date +%Y.%m.%d`;
+Time=`date +%H:%M:%S`;
+EOF
+
+ln -sf /etc/info.ini /opt/etc/info.ini
+ln -sf /etc/info.ini /usr/etc/info.ini
+
+ldconfig
+rpm --rebuilddb
+echo 'kickstart post script end'
