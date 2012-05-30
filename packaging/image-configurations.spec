@@ -7,6 +7,7 @@ License:	GPLv2
 Group:		System/Base
 URL:		http://www.tizen.org
 Source:		image-configurations-%{version}.tar.bz2
+Source1001: packaging/image-configurations.manifest 
 
 BuildArch:	noarch
 BuildRequires:  kickstarter >= 0.8
@@ -18,6 +19,7 @@ Create Configuration files to build Tizen images
 %setup -q
 
 %build
+cp %{SOURCE1001} .
 kickstarter -c configurations.yaml -r repos.yaml -i image-configs.xml
 
 %install
@@ -27,6 +29,7 @@ cp %{baseline}/*.ks %{buildroot}/usr/share/image-configurations
 cp image-configs.xml %{buildroot}/usr/share/image-configurations
 
 %files
+%manifest image-configurations.manifest
 %dir %_datadir/image-configurations
 %_datadir/image-configurations/*.ks
 %_datadir/image-configurations/image-configs.xml
