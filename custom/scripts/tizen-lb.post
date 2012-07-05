@@ -52,7 +52,7 @@ EOF
 ln -sf /etc/info.ini /opt/etc/info.ini
 ln -sf /etc/info.ini /usr/etc/info.ini
 
-cat > /usr/lib/systemd/systemd/usb-debug.service << EOF
+cat > /usr/lib/systemd/system/usb-debug.service << EOF
 [Unit]
 Description=Start usb networking for debugging
 

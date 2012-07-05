@@ -1,3 +1,6 @@
+* Thu Jul 05 2012 Patrick McCarty <patrick.mccarty@linux.intel.com> 7ee7c4e
+- tizen-lb post: fix the systemd service filename
+
 * Thu Jul 05 2012 Prajwal Mohan <william.douglas@intel.com>
 - Updating version in spec file
 - fixing configuration.yaml to match what is in OBS. Fixing Pinetrail image along with lb.
