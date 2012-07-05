@@ -1,5 +1,6 @@
 * Thu Jul 05 2012 Prajwal Mohan <william.douglas@intel.com>
 - Updating version in spec file
+- fixing configuration.yaml to match what is in OBS
 
 * Thu Jul 05 2012 William Douglas <william.douglas@intel.com> b4fcda8
 - Add usb-debug service file to tizen-lb post script.
