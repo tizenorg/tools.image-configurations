@@ -4,7 +4,7 @@ Active: True
 Platform: Handset
 FileName: handset-pinetrail
 Part: tizen-handset
-Mic2Options: -f raw --copy-kernel  --compress-disk-image=bz2
+Mic2Options: -f raw --copy-kernel --compress-image=bz2
 PostScripts:
     - users
     - rpm
