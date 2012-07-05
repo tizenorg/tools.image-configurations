@@ -52,6 +52,27 @@ EOF
 ln -sf /etc/info.ini /opt/etc/info.ini
 ln -sf /etc/info.ini /usr/etc/info.ini
 
+cat > /usr/lib/systemd/systemd/usb-debug.service << EOF
+[Unit]
+Description=Start usb networking for debugging
+
+[Service]
+Environment=PATH=/bin:/sbin
+ConditionPathExists=/sys/devices/platform/usb_mode/UsbMenuSel
+ExecStartPre=bash -c 'ip addr add 192.168.129.3 dev usb0'; bash -c 'ip link set up usb0'; bash -c 'ip route add 192.168.129.4/32 dev usb0'
+ExecStart=bash -c 'echo 4 > /sys/devices/platform/usb_mode/UsbMenuSel'
+Type=oneshot
+RemainAfterExit=yes
+ExecStop=bash -c 'echo 0 > /sys/devices/platform/usb_mode/UsbMenuSel'
+ExecStopPost=bash -c '/sbin/ip addr del 192.168.129.3 dev usb0'; bash -c '/sbin/ip link set down usb0'
+
+[Install]
+WantedBy=basic.target
+
+EOF
+
+ln -s ../usb-debug.service /usr/lib/systemd/system/basic.target.wants/usb-debug.service
+
 ldconfig
 rpm --rebuilddb
 echo 'kickstart post script end'
