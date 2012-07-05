@@ -1,7 +1,7 @@
 %define baseline tizen-0.0
 Summary:	Create kickstart files for Tizen images
 Name:		image-configurations
-Version:	6
+Version:	7
 Release:	1
 License:	GPLv2
 Group:		System/Base

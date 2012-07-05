@@ -1,6 +1,8 @@
+* Thu Jul 05 2012 Prajwal Mohan <william.douglas@intel.com>
+- Updating version in spec file
+
 * Thu Jul 05 2012 William Douglas <william.douglas@intel.com> b4fcda8
 - Add usb-debug service file to tizen-lb post script.
-- Change to trigger a submit to obs
 
 * Tue May 29 2012 Ryan Ware <ryan.r.ware@intel.com> c94e1a8
 - Add default Smack manifest for image-configurations.spec
