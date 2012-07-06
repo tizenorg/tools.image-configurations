@@ -1,0 +1,18 @@
+Name: Tizen Handset Pinetrail NG
+Schedule: "*"
+Active: True
+Platform: Handset
+FileName: handset-pinetrail-ng
+Part: tizen-handset
+Mic2Options: -f raw --copy-kernel --compress-image=bz2
+Groups:
+    - Pinetrail Support
+RemovePackages:
+    - sysvinit
+    - sysvinit-utils
+    - insserv
+ExtraPackages:
+    - systemd-sysv
+PostScripts:
+    - users
+    - rpm

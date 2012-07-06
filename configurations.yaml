@@ -28,8 +28,8 @@ LB:
     Architecture: armv7l
     Mic2Options: -f loop --pack-to=@NAME@-rs.tar.gz
     Repos:
-        - Tizen-1.0-main
-        - Tizen-1.0-base
+        - Tizen-main
+        - Tizen-base
 Handset:
     PartSize: 1024
     Bootloader: True
@@ -44,7 +44,5 @@ Handset:
         - Tizen UI
         - Tizen APIs
     Repos:
-        - Tizen-1.0-base
-        - Tizen-1.0-main
-#- Tizen-1.0-base-debug
-#- Tizen-1.0-main-debug
+        - Tizen-base
+        - Tizen-main

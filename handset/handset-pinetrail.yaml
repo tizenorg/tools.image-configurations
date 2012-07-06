@@ -9,8 +9,8 @@ PostScripts:
     - users
     - rpm
 Repos:
-    - Tizen-1.0-base
-    - Tizen-1.0-main
+    - Tizen-base
+    - Tizen-main
 
 #Groups:
 #    - Pinetrail Support

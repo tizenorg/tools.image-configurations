@@ -49,5 +49,5 @@ PostScripts:
     - tizen-lb
 
 Repos:
-    - Tizen-1.0-main
-    - Tizen-1.0-base
+    - Tizen-main
+    - Tizen-base

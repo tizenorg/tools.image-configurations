@@ -1,3 +1,6 @@
+* Fri Jul 06 2012 anas.nashif@intel.com <anas.nashif@intel.com> 20120705.4@796e5c9
+- add new systemd based pinetrail image
+
 * Thu Jul 05 2012 Patrick McCarty <patrick.mccarty@linux.intel.com> 7ee7c4e
 - tizen-lb post: fix the systemd service filename
 
