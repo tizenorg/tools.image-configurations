@@ -1,3 +1,6 @@
+* Fri Jul 06 2012 Patrick McCarty <patrick.mccarty@linux.intel.com> ea0a9f9
+- tizen-lb post: Create /home/app for app user
+
 * Fri Jul 06 2012 anas.nashif@intel.com <anas.nashif@intel.com> 20120705.4@796e5c9
 - add new systemd based pinetrail image
 

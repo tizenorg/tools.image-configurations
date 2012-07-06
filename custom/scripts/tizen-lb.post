@@ -52,6 +52,11 @@ EOF
 ln -sf /etc/info.ini /opt/etc/info.ini
 ln -sf /etc/info.ini /usr/etc/info.ini
 
+mkdir -p /home/app
+cp -a /etc/skel/.e /home/app/
+chown -R 5000:5000 /home/app
+chmod 0755 /home/app
+
 cat > /usr/lib/systemd/system/usb-debug.service << EOF
 [Unit]
 Description=Start usb networking for debugging
