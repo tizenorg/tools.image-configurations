@@ -60,16 +60,15 @@ chmod 0755 /home/app
 cat > /usr/lib/systemd/system/usb-debug.service << EOF
 [Unit]
 Description=Start usb networking for debugging
+ConditionPathExists=/sys/devices/platform/usb_mode/UsbMenuSel
 
 [Service]
-Environment=PATH=/bin:/sbin
-ConditionPathExists=/sys/devices/platform/usb_mode/UsbMenuSel
-ExecStartPre=bash -c 'ip addr add 192.168.129.3 dev usb0'; bash -c 'ip link set up usb0'; bash -c 'ip route add 192.168.129.4/32 dev usb0'
-ExecStart=bash -c 'echo 4 > /sys/devices/platform/usb_mode/UsbMenuSel'
 Type=oneshot
 RemainAfterExit=yes
-ExecStop=bash -c 'echo 0 > /sys/devices/platform/usb_mode/UsbMenuSel'
-ExecStopPost=bash -c '/sbin/ip addr del 192.168.129.3 dev usb0'; bash -c '/sbin/ip link set down usb0'
+Environment=PATH=/bin:/sbin
+ExecStart=/bin/bash -c 'echo 4 > /sys/devices/platform/usb_mode/UsbMenuSel'
+ExecStart=/sbin/ifconfig usb0 192.168.129.3 netmask 255.255.255.0
+ExecStop=/bin/bash -c 'echo 0 > /sys/devices/platform/usb_mode/UsbMenuSel'
 
 [Install]
 WantedBy=basic.target

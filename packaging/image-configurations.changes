@@ -1,3 +1,6 @@
+* Mon Jul 09 2012 Yin Kangkai <kangkai.yin@intel.com> 0cfb28b
+- tizen-lb.post: fix usb-debug service file
+
 * Fri Jul 06 2012 Patrick McCarty <patrick.mccarty@linux.intel.com> ea0a9f9
 - tizen-lb post: Create /home/app for app user
 
