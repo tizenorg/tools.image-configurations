@@ -1,3 +1,6 @@
+* Wed Jul 11 2012 Prajwal Mohan <william.douglas@intel.com>
+- Adding pinetrail support group to pinetrail images
+
 * Mon Jul 09 2012 Yin Kangkai <kangkai.yin@intel.com> 0cfb28b
 - tizen-lb.post: fix usb-debug service file
 

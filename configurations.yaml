@@ -41,6 +41,7 @@ Handset:
     Groups:
         - Base System
         - Base X Server
+        - Pinetrail Support
         - Tizen UI
         - Tizen APIs
     Repos:
