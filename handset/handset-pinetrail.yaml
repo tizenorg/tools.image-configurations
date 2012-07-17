@@ -8,9 +8,3 @@ Mic2Options: -f raw --copy-kernel --compress-image=bz2
 PostScripts:
     - users
     - rpm
-Repos:
-    - Tizen-base
-    - Tizen-main
-
-#Groups:
-#    - Pinetrail Support
