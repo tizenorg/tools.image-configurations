@@ -1,3 +1,6 @@
+* Wed Jul 18 2012 Patrick McCarty <patrick.mccarty@linux.intel.com> 8d7c348
+- tizen-lb post: create environment files for connman and wpa_supplicant
+
 * Tue Jul 17 2012 Prajwal Mohan <prajwal.karur.mohan@intel.com>
 - Removing image creation for handset-pinetrail-ng
 
