@@ -1,7 +1,10 @@
-* Tue Jul 17 2012 Prajwal Mohan <prajwal.karur.mohan@intel.com>
+* Wed Jul 18 2012 Chengwei Yang <chengwei.yang@intel.com> HEAD
+- Copy enlightment configs for user app
+
+* Tue Jul 17 2012 Prajwal Mohan <prajwal.karur.mohan@intel.com> eef4b89
 - Removing image creation for handset-pinetrail-ng
 
-* Wed Jul 11 2012 Prajwal Mohan <prajwal.karur.mohan@intel.com>
+* Wed Jul 11 2012 Prajwal Mohan <prajwal.karur.mohan@intel.com> 3c1bb02
 - Adding pinetrail support group to pinetrail images
 
 * Mon Jul 09 2012 Yin Kangkai <kangkai.yin@intel.com> 0cfb28b
