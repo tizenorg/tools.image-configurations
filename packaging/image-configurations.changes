@@ -1,3 +1,7 @@
+* Wed Jul 18 2012 Brad Peters <brad.t.peters@intel.com> 
+- Updating pinetrail image, adding image definition and KS post section, 
+  changing partition type
+
 * Wed Jul 18 2012 Chengwei Yang <chengwei.yang@intel.com> HEAD
 - Copy enlightment configs for user app
 

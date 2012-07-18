@@ -5,6 +5,32 @@ Platform: Handset
 FileName: handset-pinetrail
 Part: tizen-handset
 Mic2Options: -f raw --copy-kernel --compress-image=bz2
+
+RemovePackages:
+    - sysvinit
+    - sysvinit-utils
+    - insserv
+    - device-manager-plugin-target
+    - coreutils
+    - grep
+    - binutils
+    - gzip
+    - psmisc
+    - net-tools
+    - cpio
+    - tar
+
+ExtraPackages:
+    - systemd-sysv
+
 PostScripts:
     - users
     - rpm
+    - handset-pinetrail
+
+Repos:
+    - Tizen-base
+    - Tizen-main
+
+Groups:
+    - Pinetrail Support
