@@ -1,3 +1,6 @@
+* Thu Jul 19 2012 Arron <arron.wang@intel.com>
+- Use the right option for connman
+
 * Wed Jul 18 2012 Brad Peters <brad.t.peters@intel.com> 
 - Updating pinetrail image, adding image definition and KS post section, 
   changing partition type

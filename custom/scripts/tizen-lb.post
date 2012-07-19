@@ -79,7 +79,7 @@ ln -s ../usb-debug.service /usr/lib/systemd/system/basic.target.wants/usb-debug.
 
 # required for the connman systemd service
 cat > /etc/sysconfig/connman << EOF
-OPTIONS="--wifi=wext"
+OPTIONS="-W wext"
 EOF
 
 # required for the wpa_supplicant systemd service
