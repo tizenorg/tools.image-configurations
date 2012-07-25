@@ -70,12 +70,16 @@ ExecStart=/bin/bash -c 'echo 4 > /sys/devices/platform/usb_mode/UsbMenuSel'
 ExecStart=/sbin/ifconfig usb0 192.168.129.3 netmask 255.255.255.0
 ExecStop=/bin/bash -c 'echo 0 > /sys/devices/platform/usb_mode/UsbMenuSel'
 
+#
+# We now don't launch this USB mode hack by default. If you need that, run this:
+#   systemctl enable usb-debug.service
+# or create a link manually like below:
+#   ln -s ../usb-debug.service /usr/lib/systemd/system/basic.target.wants/usb-debug.service
+#
 [Install]
 WantedBy=basic.target
 
 EOF
-
-ln -s ../usb-debug.service /usr/lib/systemd/system/basic.target.wants/usb-debug.service
 
 # required for the connman systemd service
 cat > /etc/sysconfig/connman << EOF

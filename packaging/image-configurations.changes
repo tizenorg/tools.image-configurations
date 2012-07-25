@@ -1,3 +1,6 @@
+* Wed Jul 27 2012 Yin Kangkai <kangkai.yin@intel.com>
+- Remove the USB mode hack for LB.
+
 * Thu Jul 19 2012 Arron <arron.wang@intel.com>
 - Use the right option for connman
 
