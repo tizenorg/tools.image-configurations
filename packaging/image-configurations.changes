@@ -1,3 +1,6 @@
+* Wed Aug 08 2012 prajwal.karur.mohan@intel.com <prajwal.karur.mohan@intel.com> build/2012-07-27.004658@d55399e
+ -Chown /opt/home/app to app
+
 * Wed Jul 27 2012 Yin Kangkai <kangkai.yin@intel.com>
 - Remove the USB mode hack for LB.
 
