@@ -1,8 +1,11 @@
 mkdir -p /opt/home/app
-cp -a /etc/skel/.e /opt/home/app/
-chown -R 5000:5000 /opt/home/app
-mkdir -p /home
 mkdir -p /opt/home/root
+cp -a /etc/skel/.e /opt/home/app/
+cp -a /etc/skel/.e /ope/home/root/
+chown -R 5000:5000 /opt/home/root
+chown -R 5000:5000 /opt/home/app
+chmod 0755 /home/app
+mkdir -p /home
 [ -d /home/app ] && rm -rf /home/app
 ln -sf /opt/home/app /home/app
 [ -d /root ] && rm -rf /root
