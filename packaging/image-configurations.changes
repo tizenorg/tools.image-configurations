@@ -1,3 +1,6 @@
+* Fri Aug 10 2012 prajwal.karur.mohan@intel.com <prajwal.karur.mohan@intel.com> 20120808.1@6b4a554
+ -Removing wlandrv-plugin-bcm43xx. it conflicts with system-plugin-ia-generic
+
 * Wed Aug 08 2012 prajwal.karur.mohan@intel.com <prajwal.karur.mohan@intel.com> build/2012-07-27.004658@d55399e
  -Chown /opt/home/app to app
 

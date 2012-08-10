@@ -19,6 +19,7 @@ RemovePackages:
     - net-tools
     - cpio
     - tar
+    - wlandrv-plugin-bcm43xx
 
 ExtraPackages:
     - systemd-sysv
