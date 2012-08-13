@@ -37,18 +37,6 @@ EOF
 ln -sf /etc/info.ini /opt/etc/info.ini
 ln -sf /etc/info.ini /usr/etc/info.ini
 
-mkdir -p /home/app
-cp -a /etc/skel/.e /home/app/
-cp -a /etc/skel/.e /home/root/
-chown -R 5000:5000 /home/app
-chmod 0755 /home/app
-
-# Setup root
-mkdir -p /opt/home/root
-ln -s /opt/home/app /home/app
-ln -sf /opt/home/root /root
-
-# required for the connman systemd service
 cat > /etc/sysconfig/connman << EOF
 OPTIONS="--wifi=wext"
 EOF
