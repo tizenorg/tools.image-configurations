@@ -1,3 +1,6 @@
+* Fri Aug 10 2012 chris.e.ferron@linux.intel.com <chris.e.ferron@linux.intel.com> 
+ - move chown and cp to onnly user.post script so there will me no duplication. 
+
 * Fri Aug 10 2012 prajwal.karur.mohan@intel.com <prajwal.karur.mohan@intel.com> 20120808.1@6b4a554
  -Removing wlandrv-plugin-bcm43xx. it conflicts with system-plugin-ia-generic
 
