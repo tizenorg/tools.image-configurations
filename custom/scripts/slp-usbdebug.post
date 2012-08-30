@@ -1,0 +1,7 @@
+/* when booted */
+/* postisnt at slp/pkgs/s/setting */
+vconftool $GOPTION set -t int memory/setting/usb_sel_mode "3" -i -f
+
+/* when usb cable is disconnected */
+/* postinst at slp/pkgs/u/usb-setting */
+vconftool set -t int db/setting/keeping_debug "1"

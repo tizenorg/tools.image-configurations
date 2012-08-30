@@ -1,0 +1,15 @@
+MAJOR="2"
+MINOR="0"
+cat >/etc/info.ini <<EOF
+[Version]
+Major=$MAJOR;
+Minor=$MINOR;
+Build=Tizen_trats_`date +%Y_%m_%d`_1;
+Order=0b;
+[Build]
+Date=`date +%Y.%m.%d`;
+Time=`date +%H:%M:%S`;
+EOF
+
+ln -sf /etc/info.ini /opt/etc/info.ini
+ln -sf /etc/info.ini /usr/etc/info.ini

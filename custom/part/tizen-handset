@@ -1,3 +1,0 @@
-part /boot --size 32 --ondisk sdb --fstype=ext2
-part /opt --size 300 --ondisk sdb --fstype=ext3
-part / --size 1024 --ondisk sdb --fstype=ext3
