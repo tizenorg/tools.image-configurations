@@ -63,6 +63,7 @@ EOF
 chmod +x usr/bin/press
 
 ln -s /opt/etc/X11/xkb usr/share/X11
+rm -f /etc/localtime
 ln -s /opt/etc/localtime /etc/localtime
 #rm -rf /usr/share/zoneinfo  
 #ln -sf /opt/share/zoneinfo /usr/share/zoneinfo 
