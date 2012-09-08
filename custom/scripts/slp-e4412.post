@@ -4,7 +4,7 @@ cat >/etc/info.ini <<EOF
 [Version]
 Major=$MAJOR;
 Minor=$MINOR;
-Build=Tizen_`date +%Y_%m_%d`_1;
+Build=Tizen_2.0b_`date +%Y_%m_%d`_1;
 Order=0b;
 [Build]
 Date=`date +%Y.%m.%d`;
