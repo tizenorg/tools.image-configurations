@@ -2,7 +2,7 @@
 Summary:	Create kickstart files for Tizen images
 Name:		image-configurations
 Version:	1
-Release:	3
+Release:	4
 License:	GPLv2
 Group:		System/Base
 URL:		http://www.tizen.org
@@ -19,7 +19,19 @@ Create Configuration files to build Tizen images
 
 %build
 
+%if "%{_project}" == "SLP:Build"
+find . -name 'configurations*.yaml' -type f -exec sed -i -e "s#@SRNAME@#Build#g" {} \;
+%else if "%{_project}" == "SLP:Main"
+find . -name 'configurations*.yaml' -type f -exec sed -i -e "s#@SRNAME@#Main#g" {} \;
+%else
+find . -name 'configurations*.yaml' -type f -exec sed -i -e "s#@SRNAME@#Rel#g" {} \;
+%endif
+
+%if "%{_repository}" == "webkit"
+kickstarter -c configurations-webkit.yaml -r repos.yaml -i image-configs.xml
+%else
 kickstarter -c configurations.yaml -r repos.yaml -i image-configs.xml
+%endif
 
 %install
 
