@@ -43,7 +43,7 @@ cat >/etc/info.ini <<EOF
 Major=$MAJOR;
 Minor=$MINOR;
 Build=TIZEN_`date +%Y%m%d`_1;
-Order=0b;
+Order=0a2;
 [Build]
 Date=`date +%Y.%m.%d`;
 Time=`date +%H:%M:%S`;
