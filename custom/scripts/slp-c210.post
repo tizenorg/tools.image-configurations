@@ -5,7 +5,7 @@ cat >/etc/info.ini <<EOF
 Major=$MAJOR;
 Minor=$MINOR;
 Build=GT-I8800_c210_`date +%Y_%m_%d`_1;
-Order=0a2;
+Order=0a;
 [Build]
 Date=`date +%Y.%m.%d`;
 Time=`date +%H:%M:%S`;
