@@ -1,6 +1,8 @@
 ExternalConfigs:
   - TRATS-SDK
+  - TRATS-2.0A
   - EMULATOR-SDK
+  - EMULATOR-2.0A
   - M0-SDK
 
 Default:
@@ -31,7 +33,37 @@ EMULATOR-SDK:
         - tizen-base
         - tizen-main
 
+EMULATOR-2.0A:
+    Part: slp-emulator
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: ia32
+    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz --runtime=bootstrap
+    Repos:
+        - tizen-base
+        - tizen-main
+
 TRATS-SDK:
+    Part: trats-arm
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: armv7l
+    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz --runtime=bootstrap
+    Repos:
+        - tizen-base
+        - tizen-main
+
+TRATS-2.0A:
     Part: trats-arm
     Bootloader: True
     BootloaderAppend: "rootdelay=5"

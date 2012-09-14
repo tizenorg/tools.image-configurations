@@ -7,6 +7,7 @@ FileName: EMULATOR-SDK
 Groups:
     - common
     - appscommon
+    - ospcommon
     - appstargetsdk
     - emul
 

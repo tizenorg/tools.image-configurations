@@ -1,13 +1,12 @@
-Name: TRATS-SDK
+Name: TRATS-2.0A
 Schedule: "*"
 Active: True
-Platform: TRATS-SDK
-FileName: TRATS-SDK
+Platform: TRATS-2.0A
+FileName: TRATS-2.0A
 
 Groups:
     - common
     - appscommon
-    - ospcommon
     - appstargetsdk
     - trats
 
