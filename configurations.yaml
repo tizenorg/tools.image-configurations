@@ -1,9 +1,9 @@
 ExternalConfigs:
-  - TRATS-SDK
+#  - TRATS-SDK
   - TRATS-2.0A
-  - EMULATOR-SDK
+#  - EMULATOR-SDK
   - EMULATOR-2.0A
-  - M0-SDK
+#  - M0-SDK
 
 Default:
     Baseline: SLP-2.0
@@ -43,7 +43,7 @@ EMULATOR-2.0A:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: ia32
-    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz --runtime=bootstrap
+    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz
     Repos:
         - tizen-base
         - tizen-main
@@ -73,7 +73,7 @@ TRATS-2.0A:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: armv7l
-    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz --runtime=bootstrap
+    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz
     Repos:
         - tizen-base
         - tizen-main
