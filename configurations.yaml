@@ -43,7 +43,7 @@ EMULATOR-2.0A:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: ia32
-    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz
+    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz --runtime=bootstrap
     Repos:
         - tizen-base
         - tizen-main
@@ -73,7 +73,7 @@ TRATS-2.0A:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: armv7l
-    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz
+    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz --runtime=bootstrap
     Repos:
         - tizen-base
         - tizen-main
