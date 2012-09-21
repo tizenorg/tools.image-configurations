@@ -1,6 +1,5 @@
 ExternalConfigs:
-  - lb
-  - handset
+  - TRATS-2.0A
 
 Default:
     Baseline: tizen-0.0
