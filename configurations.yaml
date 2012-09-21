@@ -1,5 +1,6 @@
 ExternalConfigs:
   - TRATS-2.0A
+  - EMULATOR-2.0A
 
 Default:
     Baseline: tizen-0.0
@@ -15,6 +16,20 @@ Default:
     PartSize: 1900
     BootloaderOptions: ""
 
+EMULATOR-2.0A:
+    Part: slp-emulator
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: ia32
+    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz --runtime=bootstrap
+    Repos:
+        - tizen-base
+        - tizen-main
 
 TRATS-2.0A:
     Part: trats-arm
