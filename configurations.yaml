@@ -16,8 +16,56 @@ Default:
     PartSize: 1900
     BootloaderOptions: ""
 
-LB:
-    Part: tizen-arm
+#LB:
+#    Part: tizen-arm
+#    Bootloader: True
+#    BootloaderAppend: "rootdelay=5"
+#    BootloaderTimeout: 0
+#    SaveRepos:  True
+#    Desktop: None
+#    DefaultUser: root
+#    DefaultUserPass: ""
+#    Architecture: armv7l
+#    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
+#    Repos:
+#        - Tizen-base
+#        - Tizen-main
+
+#EMUL:
+#    Part: tizen-emul
+#    Bootloader: True
+#    BootloaderAppend: "rootdelay=5"
+#    BootloaderTimeout: 0
+#    SaveRepos:  True
+#    Desktop: None
+#    DefaultUser: root
+#    DefaultUserPass: ""
+#    Architecture: ia32
+#    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
+#    Repos:
+#        - Tizen-base
+#        - Tizen-main
+
+#Handset:
+#    PartSize: 1024
+#    Bootloader: True
+#    BootloaderAppend: "rootdelay=5"
+#    BootloaderTimeout: 0
+#    SaveRepos:  True
+#    Architecture: ia32
+#    Desktop: None
+#    Groups:
+#        - Base System
+#        - Base X Server
+#        - Pinetrail Support
+#        - Tizen UI
+#        - Tizen APIs
+#    Repos:
+#        - Tizen-base
+#        - Tizen-main
+
+TRATS-2.0A:
+    Part: trats-arm
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
     BootloaderTimeout: 0
@@ -26,40 +74,7 @@ LB:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: armv7l
-    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
+    Mic2Options: -f loop --pack-to=@NAME@-@SRNAME@.tar.gz --runtime=bootstrap
     Repos:
-        - Tizen-base
-        - Tizen-main
-
-EMUL:
-    Part: tizen-emul
-    Bootloader: True
-    BootloaderAppend: "rootdelay=5"
-    BootloaderTimeout: 0
-    SaveRepos:  True
-    Desktop: None
-    DefaultUser: root
-    DefaultUserPass: ""
-    Architecture: ia32
-    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
-    Repos:
-        - Tizen-base
-        - Tizen-main
-
-Handset:
-    PartSize: 1024
-    Bootloader: True
-    BootloaderAppend: "rootdelay=5"
-    BootloaderTimeout: 0
-    SaveRepos:  True
-    Architecture: ia32
-    Desktop: None
-    Groups:
-        - Base System
-        - Base X Server
-        - Pinetrail Support
-        - Tizen UI
-        - Tizen APIs
-    Repos:
-        - Tizen-base
-        - Tizen-main
+        - tizen-base
+        - tizen-main

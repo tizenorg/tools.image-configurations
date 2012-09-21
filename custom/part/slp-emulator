@@ -1,0 +1,2 @@
+# ROOT fs partition
+part / --size=3000 --ondisk=sda --fstype=ext3 --label=platform
