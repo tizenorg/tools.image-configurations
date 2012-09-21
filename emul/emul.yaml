@@ -1,11 +1,11 @@
-Name: Tizen LunchBox
+Name: Tizen Emulator
 Schedule: "*"
 Active: True
-Platform: LB
-FileName: lb
+Platform: EMUL
+FileName: emul
 
 Groups:
-    - tizen-c210
+    - tizen-emul
 
 RemovePackages:
     - glib2-static
@@ -45,7 +45,7 @@ PrePackages:
 #    - libprivilege-control-conf
 
 PostScripts:
-    - tizen-lb
+    - tizen-emul
 
 Repos:
     - Tizen-main

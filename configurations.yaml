@@ -26,10 +26,26 @@ LB:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: armv7l
-    Mic2Options: -f loop --pack-to=@NAME@-rs.tar.gz
+    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - Tizen-main
         - Tizen-base
+        - Tizen-main
+
+EMUL:
+    Part: tizen-emul
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: ia32
+    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
+    Repos:
+        - Tizen-base
+        - Tizen-main
+
 Handset:
     PartSize: 1024
     Bootloader: True
