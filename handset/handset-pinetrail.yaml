@@ -1,6 +1,6 @@
 Name: Tizen Handset Pinetrail
 Schedule: "*"
-Active: True
+Active: False
 Platform: Handset
 FileName: handset-pinetrail
 Part: tizen-handset
