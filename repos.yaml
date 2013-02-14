@@ -1,8 +1,8 @@
 Repositories:
     -   Name: tizen-base
-        Url:  https://download.tizen.org/snapshots/2.0alpha/common/@BUILD_ID@/repos/tizen-base/@ARCH@/packages/
+        Url:  https://download.tizen.org/snapshots/2.0alpha/common/@BUILD_ID@/repos/tizen-base/armv7l/packages/
         Options: --ssl_verify=no
     -   Name: tizen-main
-        Url:  https://download.tizen.org/snapshots/2.0alpha/common/@BUILD_ID@/repos/tizen-main/@ARCH@/packages/
-        Options: --save  --ssl_verify=no
+        Url:  https://download.tizen.org/snapshots/2.0alpha/common/@BUILD_ID@/repos/tizen-main/armv7l/packages/
+        Options: --ssl_verify=no
 
