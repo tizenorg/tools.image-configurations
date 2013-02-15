@@ -1,0 +1,29 @@
+Any global changes to configurations need to be done in the 
+configurations.yaml file. Local changes need to be done in the individual yaml
+files which are organised per vertical.
+
+Do not make any changes directly to the ks files. If it gets complicated and a
+certain scenario can't be done using kickstarter, please report a bug.
+
+Updates to the git repositories have no effect unless they are packaged and
+submitted to the build system.
+
+- Edit yaml files and make the desired changes
+- Verfiy integrity of the changes by running kickstarter as follows:
+
+# kickstarter -c configurations.yaml -r repos.yaml -i index.xml
+
+
+To update the package:
+- change the yaml files
+- Verify your changes
+- Bump the version in the VERSION file
+- commit and push
+- Do not change the ChangeLog file, this is generated using a script
+  run 'python scripts/gitlog2changelog.py'
+- commit and push
+- run 'make tag'
+- run 'make dist'
+- Submit the newly generated tar
+
+
