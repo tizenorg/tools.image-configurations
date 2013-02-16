@@ -1,0 +1,7 @@
+# Create /etc/cogl.conf file to load proper GL libraries on Cedartrail
+mkdir /etc/xdg/cogl
+echo "[global]" >>/etc/xdg/cogl/cogl.conf
+echo "COGL_DRIVER=gles2" >>/etc/xdg/cogl/cogl.conf
+echo "COGL_RENDERER=EGL" >>/etc/xdg/cogl/cogl.conf
+echo "COGL_DEBUG=disable-atlas" >>/etc/xdg/cogl/cogl.conf
+

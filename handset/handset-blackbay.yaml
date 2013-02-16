@@ -1,0 +1,65 @@
+Name: Tizen Handset Blackbay
+Schedule: "*"
+Active: True
+Platform: Handset
+Part: tizen-handset-blackbay
+FileName: handset-blackbay
+Mic2Options: -f loop --pack-to=@NAME@-rs.zip
+Groups:
+    - Medfield Support
+    - common
+    - appscommon
+    - appstargetsdk
+    - osp
+    - trats-blackbay
+
+RemovePackages:
+     - charging-animation
+#    - insserv
+ExtraPackages:
+    - pvr-bin-mdfld
+
+PrePackages:
+    - eglibc
+    - systemd
+    - busybox
+    - libacl
+    - libcap
+    - dbus-libs
+    - libgcc
+    - libudev
+    - libattr
+    - default-files-tizen
+    - openssl
+    - libprivilege-control
+    - libprivilege-control-conf
+    - security-server
+    - libdlog
+    - libsecurity-server-client
+    - sqlite
+    - tzdata-slp
+    - vconf
+    - tizen-coreutils
+
+PostScripts:
+    - Tizen-common
+    - handset-blackbay
+    - inittab
+#    - boot-into-ui
+#    - users
+#    - rpm
+#    - hotfixes
+#    - e17-skel
+
+NoChrootScripts:
+    - smack
+
+Repos:
+    - Tizen-base
+    - Tizen-main
+
+Attachment:
+    - preos-runtime
+    - bootstub-bb
+    - /boot/cmdline
+    - /boot/vmlinuz-*
