@@ -1,0 +1,31 @@
+ExternalConfigs:
+  - EMULATOR-2.0
+
+Default:
+    Baseline: tizen-0.0
+    FileSystem: ext3
+    Active: True
+    Language: en_US.UTF-8
+    Keyboard: us
+    SaveRepos:  True
+    Timezone: America/Los_Angeles
+    RootPass: tizen
+    DefaultUser: tizen
+    DefaultUserPass: tizen
+    PartSize: 1900
+    BootloaderOptions: ""
+
+EMULATOR-2.0:
+    Part: tizen-emulator
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: ia32
+    Mic2Options: -f loop --pack-to=@NAME@.tar.gz --runtime=native
+    Repos:
+        - Tizen-base
+        - Tizen-main
