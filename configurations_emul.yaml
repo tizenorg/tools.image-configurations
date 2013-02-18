@@ -27,5 +27,5 @@ EMULATOR-2.0:
     Architecture: ia32
     Mic2Options: -f loop --pack-to=@NAME@.tar.gz --runtime=native
     Repos:
-        - Tizen-main
         - Tizen-base
+        - Tizen-main
