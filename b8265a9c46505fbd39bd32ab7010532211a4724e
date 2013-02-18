@@ -1,0 +1,8 @@
+Change-Id: Ib8265a9c46505fbd39bd32ab7010532211a4724e
+Code-Review+2: KevinWang <kevin.a.wang@intel.com>
+Verified+1: KevinWang <kevin.a.wang@intel.com>
+Submitted-by: KevinWang <kevin.a.wang@intel.com>
+Submitted-at: Mon, 18 Feb 2013 14:29:47 +0900
+Reviewed-on: http://review.tizen.org/gerrit/2762
+Project: tools/image-configurations
+Branch: refs/heads/tizen_2.0
