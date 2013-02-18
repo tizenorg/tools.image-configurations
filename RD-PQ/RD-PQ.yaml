@@ -1,15 +1,15 @@
-Name: 210
+Name: RD-PQ
 Schedule: "*"
 Active: True
-Platform: 210
-FileName: 210
+Platform: RD-PQ
+FileName: RDPQ
 
 Groups:
     - common
     - appscommon
     - appstargetsdk
     - osp
-    - trats
+    - m0
 
 PrePackages:
     - eglibc
@@ -35,7 +35,7 @@ PrePackages:
 
 PostScripts:
     - Tizen-common
-    - TRATS
+    - M0
 
 NoChrootScripts:
     - smack
