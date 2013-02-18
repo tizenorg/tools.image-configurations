@@ -1,0 +1,4 @@
+if [[ (! -d /opt/etc/X11/xorg.conf.d) && (! -d /etc/X11/xorg.conf.d) ]]; then 
+	mkdir -p /opt/etc/X11/xorg.conf.d; 
+	ln -s /opt/etc/X11/xorg.conf.d /etc/X11; 
+fi

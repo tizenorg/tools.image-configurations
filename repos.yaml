@@ -1,0 +1,11 @@
+Repositories:
+    -   Name: Tizen-base
+        Url:  https://download.tizen.org/snapshots/2.0/common/@BUILD_ID@/repos/base/@ARCH@/packages/
+        Options: --ssl_verify=no
+    -   Name: Tizen-base-debug
+        Url:  https://download.tizen.org/snapshots/2.0/common/@BUILD_ID@/repos/base/@ARCH@/debug/
+        Options: --ssl_verify=no
+    -   Name: Tizen-main
+        Url:  https://download.tizen.org/snapshots/2.0/common/@BUILD_ID@/repos/main/@ARCH@/packages/
+        Options: --save  --ssl_verify=no
+

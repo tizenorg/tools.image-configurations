@@ -1,0 +1,2 @@
+mkdir /opt/home/root
+ln -sf /opt/home/root /root
