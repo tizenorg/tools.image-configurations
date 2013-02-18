@@ -29,7 +29,7 @@ Handset:
         - Tizen-base
         - Tizen-main
 210:
-    Part: 210
+    Part: trats-arm
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
     BootloaderTimeout: 0
@@ -43,7 +43,7 @@ Handset:
         - Tizen-main
         - Tizen-base
 PQ:
-    Part: PQ
+    Part: m0-arm
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
     BootloaderTimeout: 0
