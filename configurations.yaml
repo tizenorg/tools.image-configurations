@@ -1,6 +1,6 @@
 ExternalConfigs:
-  - TRATS-2.0
-  - M0-2.0
+  - 210
+  - PQ
   - handset
 
 Default:
@@ -28,8 +28,8 @@ Handset:
     Repos:
         - Tizen-base
         - Tizen-main
-TRATS-2.0:
-    Part: trats-arm
+210:
+    Part: 210
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
     BootloaderTimeout: 0
@@ -42,8 +42,8 @@ TRATS-2.0:
     Repos:
         - Tizen-main
         - Tizen-base
-M0-2.0:
-    Part: m0-arm
+PQ:
+    Part: PQ
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
     BootloaderTimeout: 0
