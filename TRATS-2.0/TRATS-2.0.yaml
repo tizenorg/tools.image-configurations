@@ -1,8 +1,8 @@
-Name: TRATS-2.0
+Name: 210
 Schedule: "*"
 Active: True
-Platform: Tizen-2.0
-FileName: Ref.Device-210
+Platform: 210
+FileName: 210
 
 Groups:
     - common

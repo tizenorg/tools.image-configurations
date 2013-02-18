@@ -1,8 +1,8 @@
-Name: M0-2.0
+Name: PQ
 Schedule: "*"
 Active: True
-Platform: Tizen-2.0
-FileName: Ref.Device-PQ
+Platform: PQ
+FileName: PQ
 
 Groups:
     - common
