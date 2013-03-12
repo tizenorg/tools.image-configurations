@@ -1,0 +1,1 @@
+cat /etc/pki/tls/certs/download.saobs.jf.intel.com >> /etc/pki/tls/certs/ca-bundle.crt

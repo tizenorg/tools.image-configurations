@@ -1,0 +1,46 @@
+ExternalConfigs:
+  - EMULATOR-RSA
+  - ARM-EMULATOR-RSA
+
+Default:
+    Baseline: tizen-0.0
+    FileSystem: ext3
+    Active: True
+    Language: en_US.UTF-8
+    Keyboard: us
+    SaveRepos:  True
+    Timezone: America/Los_Angeles
+    RootPass: tizen
+    DefaultUser: tizen
+    DefaultUserPass: tizen
+    PartSize: 1900
+    BootloaderOptions: ""
+
+EMULATOR-RSA:
+    Part: tizen-emulator
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: ia32
+    Mic2Options: -f loop --pack-to=@NAME@.tar.gz --runtime=native
+    Repos:
+        - Tizen-main
+        - Tizen-base
+ARM-EMULATOR-RSA:
+    Part: tizen-emulator
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: arm7l
+    Mic2Options: -f loop --pack-to=@NAME@.tar.gz --runtime=native
+    Repos:
+        - Tizen-main
+        - Tizen-base

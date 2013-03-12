@@ -1,0 +1,16 @@
+# this file should be deleted after elegant fix merged
+############################### hacks to get PR3/Tizen 2.0
+# usbnet, udev, ssh, and other stuff
+cat > /etc/rc.d/rc3.d/S01debug << EOF
+
+# udev
+/sbin/udevd --daemon
+/sbin/udevadm trigger
+
+EOF
+
+chmod +x /etc/rc.d/rc3.d/S01debug
+
+sed -i  's/\(\usr\/bin\/scim.*\)/\1 \&/' /etc/X11/xinitrc
+
+###############################
