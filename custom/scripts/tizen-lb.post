@@ -6,14 +6,13 @@ rm -rf /etc/init.d*
 ln -sf /etc/rc.d/init.d /etc/init.d
 
 # Without this line the rpm don't get the architecture right.
-echo -n 'armv7l-tizen-linux' > /etc/rpm/platform
+echo -n 'armv7l-meego-linux' > /etc/rpm/platform
 
 ssh-keygen -t rsa1 -f /etc/ssh/ssh_host_key -N ""
 ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N ""
 ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ""
 
 ail_initdb
-/opt/apps/com.samsung.menu-screen/bin/menuscreen_initdb
 
 cat > /usr/bin/press << EOF
 #!/bin/sh

@@ -1,8 +1,8 @@
 if [ -f /etc/device-sec-policy ]; then
- cp -fp /etc/device-sec-policy $INSTALL_ROOT/etc/
+	cp -fp /etc/device-sec-policy $INSTALL_ROOT/etc/
 fi
 
 if [ -d /etc/smack/accesses.d ]; then
- mkdir -p $INSTALL_ROOT/opt/etc/smack/accesses.d
- cp -rfp /etc/smack/accesses.d/* $INSTALL_ROOT/opt/etc/smack/accesses.d/
+	mkdir -p $INSTALL_ROOT/opt/etc/smack/accesses.d
+	cp -rfp /etc/smack/accesses.d/* $INSTALL_ROOT/opt/etc/smack/accesses.d/
 fi

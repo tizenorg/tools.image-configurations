@@ -11,10 +11,9 @@ Groups:
     - appscommon
     - appstargetsdk
     - osp
-    - trats-blackbay
+    - blackbay
 
 RemovePackages:
-     - charging-animation
 #    - insserv
 ExtraPackages:
     - pvr-bin-mdfld
@@ -45,11 +44,6 @@ PostScripts:
     - Tizen-common
     - handset-blackbay
     - inittab
-#    - boot-into-ui
-#    - users
-#    - rpm
-#    - hotfixes
-#    - e17-skel
 
 NoChrootScripts:
     - smack

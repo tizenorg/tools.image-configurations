@@ -17,7 +17,6 @@ ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ""
 pkg_initdb
 
 INITDB=1 ail_initdb
-/opt/apps/com.samsung.menu-screen/bin/menuscreen_initdb
 
 # ims-service domain setting
 RESULT=`grep "192.168.0.163 config.45001.rcse" /etc/hosts`  
@@ -42,15 +41,20 @@ exit \$?
 EOF
 chmod +x /usr/bin/press
 
+# [systemd] we need suid-root X for it to work from user-session
+#           Xorg will move to system, so this is temporary
+chmod 4755 /usr/bin/Xorg
+
 ln -s /opt/etc/X11/xkb /usr/share/X11
 
 echo "UDEV_PERSISTENT_STORAGE=no" >> /etc/sysconfig/udev
 
+# for QA
 mv /usr/include/python2.7/pyconfig.h /usr/pyconfig.h
 rm -rf /usr/include/*
 mkdir -p /usr/include/python2.7
 mv /usr/pyconfig.h /usr/include/python2.7/pyconfig.h
-
+#rm -rf /usr/include
 rm -rf /usr/share/man
 rm -rf /usr/share/doc
 
@@ -58,11 +62,26 @@ ldconfig
 
 mkdir -p /opt/var/lib/dbus
 
+
+# read-writeable /var will be bind-mounted to /opt/var leaving rootfs read-only
+# below script more generic
+
 rm -f /var/lib/rpm/__db*
-mv -f /var/lib/rpm /opt/var/lib/ 
-ln -sf /opt/var/lib/rpm /var/lib/rpm
-rpmdb --rebuilddb
+rpm --rebuilddb
+cp -a /var /opt/
+rm -rf /var
+mkdir /var
+
+
+# [systemd] some firstboot script like kbd could be done to image-creatation stage
+#           this patch is for it.
+for i in /etc/preconf.d/*; do
+    $i
+done
 
 if [ -e /usr/bin/build-backup-data.sh ]; then
            /usr/bin/build-backup-data.sh
 fi
+
+ln -sf /etc/info.ini /opt/etc/info.ini
+ln -sf /etc/info.ini /usr/etc/info.ini

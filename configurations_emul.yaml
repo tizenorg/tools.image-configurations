@@ -26,7 +26,7 @@ EMULATOR-RSA:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: ia32
-    Mic2Options: -f loop --pack-to=@NAME@.tar.gz --runtime=native
+    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
     Repos:
         - Tizen-main
         - Tizen-base
@@ -40,7 +40,7 @@ ARM-EMULATOR-RSA:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: arm7l
-    Mic2Options: -f loop --pack-to=@NAME@.tar.gz --runtime=native
+    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
     Repos:
         - Tizen-main
         - Tizen-base

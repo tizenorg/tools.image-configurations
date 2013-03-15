@@ -32,7 +32,7 @@ desktop_list=$desktop_list' '$(find /usr/share/applications -name '*.desktop')
 for desktop_file in $desktop_list; do                                                            
 #    if [[ $desktop_file =~ .*org.tizen.setting.desktop.* ]];then                          
 #        echo $desktop_file                                        
-#        echo 'skip com.samsung.setting.desktop'                   
+#        echo 'skip com.tizen.setting.desktop'
 #        continue                                                  
 #    fi                                                            
                                                                   
@@ -72,6 +72,10 @@ exit \$?
 EOF
 chmod +x usr/bin/press
 
+# [systemd] we need suid-root X for it to work from user-session
+#           Xorg will move to system, so this is temporary
+chmod 4755 /usr/bin/Xorg
+
 ln -s /opt/etc/X11/xkb usr/share/X11
 rm -f /etc/localtime
 ln -s /opt/etc/localtime /etc/localtime
@@ -80,11 +84,12 @@ ln -s /opt/etc/localtime /etc/localtime
 
 echo "UDEV_PERSISTENT_STORAGE=no" >> etc/sysconfig/udev
 
+# for QA
 mv /usr/include/python2.7/pyconfig.h /usr/pyconfig.h
 rm -rf /usr/include/*
 mkdir -p /usr/include/python2.7
 mv /usr/pyconfig.h /usr/include/python2.7/pyconfig.h
-
+#rm -rf /usr/include
 rm -rf usr/share/man
 rm -rf usr/share/doc
 
@@ -95,8 +100,18 @@ rm -rf usr/share/doc
 ln -sf /etc/info.ini /opt/etc/info.ini
 ln -sf /etc/info.ini /usr/etc/info.ini
 
+# read-writeable /var will be bind-mounted to /opt/var leaving rootfs read-only
+# below script more generic
+
 rm -f /var/lib/rpm/__db*
-mv -f /var/lib/rpm /opt/var/lib/ 
-ln -sf /opt/var/lib/rpm /var/lib/rpm
-rpmdb --rebuilddb
+rpm --rebuilddb
+cp -a /var /opt/
+rm -rf /var
+mkdir /var
+
+# [systemd] some firstboot script like kbd could be done to image-creatation stage
+#           this patch is for it.
+for i in /etc/preconf.d/*; do
+    $i
+done
 

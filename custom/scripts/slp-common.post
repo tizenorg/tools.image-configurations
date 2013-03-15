@@ -20,7 +20,6 @@ ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ""
 pkg_initdb
 
 INITDB=1 ail_initdb
-/opt/apps/com.samsung.menu-screen/bin/menuscreen_initdb
 
 # ims-service domain setting
 RESULT=`grep "192.168.0.163 config.45001.rcse" /etc/hosts`  

@@ -1,7 +1,6 @@
+# Without this line the rpm don't get the architecture right.
+echo -n 'armv7l-tizen-linux' > /etc/rpm/platform
+
+
 /etc/make_info_file.sh Ref.Device-PQ Tizen_Ref.Device-PQ_`date +%Y%m%d.%H%M`
 
-ln -sf /etc/info.ini /opt/etc/info.ini
-ln -sf /etc/info.ini /usr/etc/info.ini
-
-#Moving platform to arch specific posts, from common
-echo -n 'armv7l-tizen-linux' > /etc/rpm/platform

@@ -1,8 +1,3 @@
-/etc/make_info_file.sh handset-blackbay Tizen_handset-blackbay-@BUILD_ID@
+/etc/make_info_file.sh handset-blackbay Tizen_handset-blackbay_`date +%Y%m%d.%H%M`
 
-ln -sf /etc/info.ini /opt/etc/info.ini
-ln -sf /etc/info.ini /usr/etc/info.ini
-
-rm -fr /root
-ln -s /opt/home/app/ /root
-
+touch /opt/etc/.debugmode

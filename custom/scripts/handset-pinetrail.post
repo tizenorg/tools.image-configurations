@@ -10,7 +10,6 @@ ln -sf /etc/rc.d/init.d /etc/init.d
 echo -n 'i686-meego-linux' > /etc/rpm/platform
 
 ail_initdb
-/opt/apps/com.samsung.menu-screen/bin/menuscreen_initdb
 
 
 ln -s /opt/etc/X11/xkb /usr/share/X11

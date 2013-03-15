@@ -1,9 +1,6 @@
 ExternalConfigs:
-#  - EMULATOR-RSA
-#  - ARM-EMULATOR-RSA
   - TRATS-RSA
   - M0-RSA
-#  - lb
   - handset
 
 Default:
@@ -20,20 +17,6 @@ Default:
     PartSize: 1900
     BootloaderOptions: ""
 
-LB:
-    Part: tizen-arm
-    Bootloader: True
-    BootloaderAppend: "rootdelay=5"
-    BootloaderTimeout: 0
-    SaveRepos:  True
-    Desktop: None
-    DefaultUser: root
-    DefaultUserPass: ""
-    Architecture: armv7l
-    Mic2Options: -f loop --pack-to=@NAME@-rs.tar.gz
-    Repos:
-        - Tizen-main
-        - Tizen-base
 Handset:
     PartSize: 1024
     Bootloader: True
@@ -45,34 +28,6 @@ Handset:
     Repos:
         - Tizen-base
         - Tizen-main
-EMULATOR-RSA:
-    Part: tizen-emulator
-    Bootloader: True
-    BootloaderAppend: "rootdelay=5"
-    BootloaderTimeout: 0
-    SaveRepos:  True
-    Desktop: None
-    DefaultUser: root
-    DefaultUserPass: ""
-    Architecture: ia32
-    Mic2Options: -f loop --pack-to=@NAME@.tar.gz --runtime=native
-    Repos:
-        - Tizen-main
-        - Tizen-base
-ARM-EMULATOR-RSA:
-    Part: tizen-emulator
-    Bootloader: True
-    BootloaderAppend: "rootdelay=5"
-    BootloaderTimeout: 0
-    SaveRepos:  True
-    Desktop: None
-    DefaultUser: root
-    DefaultUserPass: ""
-    Architecture: arm7l
-    Mic2Options: -f loop --pack-to=@NAME@.tar.gz --runtime=native
-    Repos:
-        - Tizen-main
-        - Tizen-base
 TRATS-RSA:
     Part: trats-arm
     Bootloader: True
@@ -83,7 +38,7 @@ TRATS-RSA:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: armv7l
-    Mic2Options: -f loop --pack-to=@NAME@.tar.gz --runtime=native
+    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
     Repos:
         - Tizen-main
         - Tizen-base
@@ -97,7 +52,7 @@ M0-RSA:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: armv7l
-    Mic2Options: -f loop --pack-to=@NAME@.tar.gz --runtime=native
+    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
     Repos:
         - Tizen-main
         - Tizen-base
