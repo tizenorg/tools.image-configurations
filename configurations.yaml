@@ -1,6 +1,6 @@
 ExternalConfigs:
-  - TRATS-RSA
-  - M0-RSA
+  - RD-210
+  - RD-PQ
   - handset
 
 Default:
@@ -28,7 +28,7 @@ Handset:
     Repos:
         - Tizen-base
         - Tizen-main
-TRATS-RSA:
+RD-210:
     Part: trats-arm
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
@@ -42,7 +42,7 @@ TRATS-RSA:
     Repos:
         - Tizen-main
         - Tizen-base
-M0-RSA:
+RD-PQ:
     Part: m0-arm
     Bootloader: True
     BootloaderAppend: "rootdelay=5"

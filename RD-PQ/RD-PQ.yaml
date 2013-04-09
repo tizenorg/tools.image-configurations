@@ -1,8 +1,8 @@
-Name: M0-RSA
+Name: RD-PQ
 Schedule: "*"
 Active: True
-Platform: M0-RSA
-FileName: M0-RSA
+Platform: RD-PQ
+FileName: RD-PQ
 
 Groups:
     - common
@@ -10,14 +10,6 @@ Groups:
     - appstargetsdk
     - osp
     - m0
-
-#RemovePackages:
-#    - glib2-static
-#    - insserv
-#    - gettext-tools
-#    - eglibc-utils
-#    - imake
-#    - giflib-utils
 
 PrePackages:
     - eglibc
@@ -29,7 +21,7 @@ PrePackages:
     - libgcc
     - libudev
     - libattr
-    - default-files-slp
+    - default-files-tizen
     - openssl
     - libprivilege-control
     - libprivilege-control-conf
@@ -43,7 +35,7 @@ PrePackages:
 
 PostScripts:
     - Tizen-common
-    - M0-RSA
+    - M0
 
 NoChrootScripts:
     - smack

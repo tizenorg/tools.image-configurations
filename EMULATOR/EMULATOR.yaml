@@ -1,23 +1,16 @@
-Name: TRATS-RSA
+Name: EMULATOR
 Schedule: "*"
 Active: True
-Platform: TRATS-RSA
-FileName: TRATS-RSA
+Platform: EMULATOR
+FileName: EMULATOR
 
 Groups:
     - common
+    - apps-emul
     - appscommon
-    - appstargetsdk
+    - appsref
     - osp
-    - trats
-
-#RemovePackages:
-#    - glib2-static
-#    - insserv
-#    - gettext-tools
-#    - eglibc-utils
-#    - imake
-#    - giflib-utils
+    - emul
 
 PrePackages:
     - eglibc
@@ -29,7 +22,7 @@ PrePackages:
     - libgcc
     - libudev
     - libattr
-    - default-files-slp
+    - default-files-tizen
     - openssl
     - libprivilege-control
     - libprivilege-control-conf
@@ -42,12 +35,12 @@ PrePackages:
     - tizen-coreutils
 
 PostScripts:
-    - Tizen-common
-    - TRATS-RSA
+    - Tizen-emulator
 
 NoChrootScripts:
     - smack
 
 Repos:
     - Tizen-base
+    - Tizen-base-debug
     - Tizen-main

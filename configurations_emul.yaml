@@ -1,6 +1,5 @@
 ExternalConfigs:
-  - EMULATOR-RSA
-  - ARM-EMULATOR-RSA
+  - EMULATOR
 
 Default:
     Baseline: tizen-0.0
@@ -16,7 +15,7 @@ Default:
     PartSize: 1900
     BootloaderOptions: ""
 
-EMULATOR-RSA:
+EMULATOR:
     Part: tizen-emulator
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
@@ -26,20 +25,6 @@ EMULATOR-RSA:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: ia32
-    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
-    Repos:
-        - Tizen-main
-        - Tizen-base
-ARM-EMULATOR-RSA:
-    Part: tizen-emulator
-    Bootloader: True
-    BootloaderAppend: "rootdelay=5"
-    BootloaderTimeout: 0
-    SaveRepos:  True
-    Desktop: None
-    DefaultUser: root
-    DefaultUserPass: ""
-    Architecture: arm7l
     Mic2Options: -f loop --pack-to=@NAME@.tar.gz
     Repos:
         - Tizen-main

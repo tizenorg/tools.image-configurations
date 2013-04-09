@@ -1,25 +1,15 @@
-Name: EMULATOR-RSA
+Name: RD-210
 Schedule: "*"
 Active: True
-Platform: EMULATOR-RSA
-FileName: EMULATOR-RSA
+Platform: RD-210
+FileName: RD-210
 
 Groups:
     - common
-    - apps-emul
     - appscommon
-    - appsref
+    - appstargetsdk
     - osp
-    - emul
-
-#RemovePackages:
-#    - glib2-static
-#    - insserv
-#    - gettext-tools
-#    - eglibc-utils
-#    - imake
-#    - giflib-utils
-#    - u-boot-tools
+    - trats
 
 PrePackages:
     - eglibc
@@ -31,7 +21,7 @@ PrePackages:
     - libgcc
     - libudev
     - libattr
-    - default-files-slp
+    - default-files-tizen
     - openssl
     - libprivilege-control
     - libprivilege-control-conf
@@ -44,12 +34,12 @@ PrePackages:
     - tizen-coreutils
 
 PostScripts:
-    - Tizen-emulator
+    - Tizen-common
+    - TRATS
 
 NoChrootScripts:
     - smack
 
 Repos:
     - Tizen-base
-    - Tizen-base-debug
     - Tizen-main
