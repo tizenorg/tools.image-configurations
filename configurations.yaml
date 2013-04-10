@@ -2,6 +2,7 @@ ExternalConfigs:
   - RD-210
   - RD-PQ
   - handset
+  - pinetrail
 
 Default:
     Baseline: tizen-0.0
@@ -19,6 +20,17 @@ Default:
 
 Handset:
     PartSize: 1024
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Architecture: ia32
+    Desktop: None
+    Repos:
+        - Tizen-base
+        - Tizen-main
+Pinetrail:
+    PartSize: 2048
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
     BootloaderTimeout: 0

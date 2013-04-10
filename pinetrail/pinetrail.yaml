@@ -1,0 +1,51 @@
+Name: Tizen Pinetrail
+Schedule: "*"
+Active: True
+Platform: Pinetrail
+Part: tizen-pinetrail
+FileName: pinetrail
+Mic2Options: -f liveusb --pack-to=@NAME@-rs.zip
+Groups:
+    - Pinetrail Support
+    - common
+    - appscommon
+    - appstargetsdk
+    - osp
+
+RemovePackages:
+#    - insserv
+ExtraPackages:
+
+PrePackages:
+    - eglibc
+    - systemd
+    - busybox
+    - libacl
+    - libcap
+    - dbus-libs
+    - libgcc
+    - libudev
+    - libattr
+    - default-files-slp
+    - openssl
+    - libprivilege-control
+    - libprivilege-control-conf
+    - security-server
+    - libdlog
+    - libsecurity-server-client
+    - sqlite
+    - tzdata-slp
+    - vconf
+    - tizen-coreutils
+
+PostScripts:
+    - Tizen-common
+    - handset-blackbay
+    - inittab
+
+NoChrootScripts:
+    - smack
+
+Repos:
+    - Tizen-base
+    - Tizen-main
