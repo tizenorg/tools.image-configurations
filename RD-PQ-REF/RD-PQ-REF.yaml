@@ -1,0 +1,46 @@
+Name: RD-PQ-REF
+Schedule: "*"
+Active: True
+Platform: RD-PQ-REF
+FileName: RD-PQ-REF
+
+Groups:
+    - common
+    - appscommon
+    - appstargetsdk
+    - appsref
+    - osp
+    - m0
+
+PrePackages:
+    - eglibc
+    - systemd
+    - busybox
+    - libacl
+    - libcap
+    - dbus-libs
+    - libgcc
+    - libudev
+    - libattr
+    - default-files-tizen
+    - openssl
+    - libprivilege-control
+    - libprivilege-control-conf
+    - security-server
+    - libdlog
+    - libsecurity-server-client
+    - sqlite
+    - tzdata-slp
+    - vconf
+    - tizen-coreutils
+
+PostScripts:
+    - Tizen-common
+    - M0
+
+NoChrootScripts:
+    - smack
+
+Repos:
+    - Tizen-base
+    - Tizen-main
