@@ -36,7 +36,7 @@ PrePackages:
 
 PostScripts:
     - Tizen-common
-    - M0
+    - M0-REF
 
 NoChrootScripts:
     - smack
