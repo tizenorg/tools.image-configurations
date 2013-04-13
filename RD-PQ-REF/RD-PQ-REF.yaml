@@ -7,7 +7,6 @@ FileName: RD-PQ-REF
 Groups:
     - common
     - appscommon
-    - appstargetsdk
     - appsref
     - osp
     - m0
