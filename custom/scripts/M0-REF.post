@@ -34,4 +34,7 @@ for desktop_file in $desktop_list; do
 	sed -i 's/NoDisplay=false/NoDisplay=true/g' $desktop_file
 	echo $(basename $desktop_file)' modified '$(grep NoDisplay -rn $desktop_file)
 done
+
+chroot . ail_initdb
 #### set NoDisplay=true for desktop files : end
+
