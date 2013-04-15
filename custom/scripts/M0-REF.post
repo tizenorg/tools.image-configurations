@@ -4,8 +4,6 @@ echo -n 'armv7l-tizen-linux' > /etc/rpm/platform
 
 /etc/make_info_file.sh Ref.Device-PQ Tizen_Ref.Device-PQ_`date +%Y%m%d.%H%M`
 
-rpm -e apps.Settings
-
 #### set NoDisplay=true for desktop files : start
 desktop_list=$(find /opt/share/applications -name '*.desktop')
 desktop_list=$desktop_list' '$(find /usr/share/applications -name '*.desktop')

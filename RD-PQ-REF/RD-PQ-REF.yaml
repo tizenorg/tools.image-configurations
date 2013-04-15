@@ -12,6 +12,9 @@ Groups:
     - osp
     - m0
 
+RemovePackages:
+    - apps.Settings
+
 PrePackages:
     - eglibc
     - systemd
