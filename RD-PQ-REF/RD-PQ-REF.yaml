@@ -11,6 +11,7 @@ Groups:
     - appsref
     - osp
     - m0
+    - m0-ref		
 
 RemovePackages:
     - apps.Settings
