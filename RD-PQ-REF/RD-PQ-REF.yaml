@@ -13,9 +13,6 @@ Groups:
     - m0
     - m0-ref
 
-RemovePackages:
-    - apps.Settings
-
 PrePackages:
     - eglibc
     - systemd

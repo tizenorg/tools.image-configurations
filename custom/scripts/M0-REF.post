@@ -9,12 +9,6 @@ desktop_list=$(find /opt/share/applications -name '*.desktop')
 desktop_list=$desktop_list' '$(find /usr/share/applications -name '*.desktop')
 
 for desktop_file in $desktop_list; do
-    if [[ $desktop_file =~ .*org.tizen.setting.desktop.* ]];then                          
-        echo $desktop_file                                        
-        echo 'skip com.tizen.setting.desktop'
-        continue                                                  
-    fi                                                            
-
     if [[ ! -z `awk '/X-TIZEN-PackageType/ {print}' $desktop_file` ]];then
 		if [[ -z `awk '/X-TIZEN-PackageType=rpm/ {print}' $desktop_file` ]];then
 			echo 'skip' $desktop_file
