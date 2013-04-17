@@ -1,5 +1,6 @@
 ExternalConfigs:
   - RD-210
+  - RD-210-REF
   - RD-PQ
   - RD-PQ-REF
   - handset
@@ -42,6 +43,20 @@ Pinetrail:
         - Tizen-base
         - Tizen-main
 RD-210:
+    Part: trats-arm
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: armv7l
+    Mic2Options: -f loop --pack-to=@NAME@.tar.gz
+    Repos:
+        - Tizen-main
+        - Tizen-base
+RD-210-REF:
     Part: trats-arm
     Bootloader: True
     BootloaderAppend: "rootdelay=5"

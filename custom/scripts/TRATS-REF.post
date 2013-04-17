@@ -1,0 +1,26 @@
+# Without this line the rpm don't get the architecture right.
+echo -n 'armv7l-tizen-linux' > /etc/rpm/platform
+
+/etc/make_info_file.sh Ref.Device-210 Tizen_Ref.Device-210_`date +%Y%m%d.%H%M`
+
+#### set NoDisplay=true for desktop files : start
+desktop_list=$(find /opt/share/applications -name '*.desktop')
+desktop_list=$desktop_list' '$(find /usr/share/applications -name '*.desktop')
+
+for desktop_file in $desktop_list; do
+	if [[ ! -z `awk '/X-TIZEN-PackageType/ {print}' $desktop_file` ]];then
+		if [[ -z `awk '/X-TIZEN-PackageType=rpm/ {print}' $desktop_file` ]];then
+			echo 'skip' $desktop_file
+			continue
+		fi
+	fi
+
+	appid=$(echo $desktop_file | sed -n "s/.desktop.*//p" | sed -n "s/\/.*share.applications\///p")
+	sqlite3 /opt/dbspace/.pkgmgr_parser.db "update package_app_info set app_nodisplay='true' where app_id='$appid'"
+
+	sed -i 's/NoDisplay=false/NoDisplay=true/g' $desktop_file
+	echo $(basename $desktop_file)' modified '$(grep NoDisplay -rn $desktop_file)
+done
+
+chroot . ail_initdb
+#### set NoDisplay=true for desktop files : end
