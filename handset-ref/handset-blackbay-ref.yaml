@@ -1,15 +1,16 @@
-Name: Tizen Handset Blackbay
+Name: Tizen Handset Blackbay REF
 Schedule: "*"
 Active: True
 Platform: Handset
 Part: tizen-handset-blackbay
-FileName: handset-blackbay
+FileName: handset-blackbay-ref
 Mic2Options: -f loop --pack-to=@NAME@-rs.zip
 Groups:
     - Medfield Support
     - common
     - appscommon
-    - appstargetsdk
+    - apps-emul
+    - appsref
     - osp
     - blackbay
 
