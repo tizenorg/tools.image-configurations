@@ -4,6 +4,7 @@ ExternalConfigs:
   - RD-PQ
   - RD-PQ-REF
   - handset
+  - handset-ref
   - pinetrail
 
 Default:

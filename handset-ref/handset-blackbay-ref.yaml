@@ -13,6 +13,7 @@ Groups:
     - appsref
     - osp
     - blackbay
+    - m0-ref
 
 RemovePackages:
 #    - insserv
