@@ -33,6 +33,7 @@ PrePackages:
     - tzdata-slp
     - vconf
     - tizen-coreutils
+    - rpm-security-plugin
 
 PostScripts:
     - Tizen-emulator
