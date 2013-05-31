@@ -6,9 +6,8 @@ FileName: EMULATOR
 
 Groups:
     - common
-    - apps-emul
-    - appscommon
-    - appsref
+    - apps-common
+    - apps-ref
     - osp
     - emul
 

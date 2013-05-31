@@ -8,12 +8,12 @@ Mic2Options: -f loop --pack-to=@NAME@-rs.zip
 Groups:
     - Medfield Support
     - common
-    - appscommon
-    - apps-emul
-    - appsref
+    - apps-common
+    - apps-ref
     - osp
-    - blackbay
-    - m0-ref
+    - target-common
+    - target-blackbay
+    - target-ref
 
 RemovePackages:
 #    - insserv

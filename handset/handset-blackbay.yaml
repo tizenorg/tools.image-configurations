@@ -8,10 +8,11 @@ Mic2Options: -f loop --pack-to=@NAME@-rs.zip
 Groups:
     - Medfield Support
     - common
-    - appscommon
-    - appstargetsdk
+    - apps-common
+    - apps-core
     - osp
-    - blackbay
+    - target-common
+    - target-blackbay
 
 RemovePackages:
 #    - insserv

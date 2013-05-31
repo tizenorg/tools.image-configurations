@@ -6,10 +6,11 @@ FileName: RD-PQ
 
 Groups:
     - common
-    - appscommon
-    - appstargetsdk
+    - apps-common
+    - apps-core
     - osp
-    - m0
+    - target-common
+    - target-rd-pq
 
 PrePackages:
     - eglibc

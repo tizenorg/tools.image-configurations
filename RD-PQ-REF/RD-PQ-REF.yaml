@@ -6,12 +6,12 @@ FileName: RD-PQ-REF
 
 Groups:
     - common
-    - appscommon
-    - apps-emul
-    - appsref
+    - apps-common
+    - apps-ref
     - osp
-    - m0
-    - m0-ref
+    - target-common
+    - target-rd-pq
+    - target-ref
 
 PrePackages:
     - eglibc

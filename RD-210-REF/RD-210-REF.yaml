@@ -6,12 +6,12 @@ FileName: RD-210-REF
 
 Groups:
     - common
-    - appscommon
-    - apps-emul
-    - appsref
+    - apps-common
+    - apps-ref
     - osp
-    - trats
-    - m0-ref
+    - target-common
+    - target-rd-210
+    - target-ref
 
 PrePackages:
     - eglibc

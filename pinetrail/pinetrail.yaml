@@ -8,8 +8,8 @@ Mic2Options: -f liveusb --pack-to=@NAME@-rs.zip
 Groups:
     - Pinetrail Support
     - common
-    - appscommon
-    - appstargetsdk
+    - apps-common
+    - apps-core
     - osp
 
 RemovePackages:
