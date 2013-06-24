@@ -1,11 +1,11 @@
 ExternalConfigs:
-  - RD-210
-  - RD-210-REF
-  - RD-PQ
+#  - RD-210
+#  - RD-210-REF
+#  - RD-PQ
   - RD-PQ-REF
-  - handset
-  - handset-ref
-  - pinetrail
+#  - handset
+#  - handset-ref
+#  - pinetrail
 
 Default:
     Baseline: tizen-0.0
