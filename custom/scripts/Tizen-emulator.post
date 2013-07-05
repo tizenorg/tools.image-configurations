@@ -53,7 +53,7 @@ done
 #### set NoDisplay=true for desktop files : end 
 
 chroot . ail_initdb
-chsmack -a 'ail::db' /opt/dbspace/.app_info.db*
+chroot . pkg_smack
 
 cat > usr/bin/press << EOF
 #!/bin/sh

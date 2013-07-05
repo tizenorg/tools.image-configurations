@@ -24,5 +24,6 @@ for desktop_file in $desktop_list; do
 done
 
 chroot . ail_initdb
+chroot . pkg_smack
 #### set NoDisplay=true for desktop files : end
 
