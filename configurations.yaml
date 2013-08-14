@@ -1,6 +1,6 @@
 ExternalConfigs:
-  - RD-210
-  - RD-210-REF
+#  - RD-210
+#  - RD-210-REF
   - RD-PQ
   - RD-PQ-REF
   - handset
