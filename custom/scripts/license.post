@@ -1,0 +1,30 @@
+_LICENSE_DIR=/usr/share/license
+_LICENSE_FILE=$_/usr/share/license.html
+if [ -f $_LICENSE_FILE ]
+then
+	rm $_LICENSE_FILE
+fi
+_LICENSE_LIST=`ls $_LICENSE_DIR`
+echo "<html>" >> $_LICENSE_FILE
+echo "<head>" >> $_LICENSE_FILE
+echo "<meta name=\"viewport\" content=\"initial-scale=1.0\">" >> $_LICENSE_FILE
+echo "</head>" >> $_LICENSE_FILE
+echo "<body>" >> $_LICENSE_FILE
+echo "<xmp>" >> $_LICENSE_FILE
+for license in $_LICENSE_LIST
+do
+	if [ -f $_LICENSE_DIR/$license ]
+	then
+		echo $license: >> $_LICENSE_FILE
+		echo >> $_LICENSE_FILE
+		cat $_LICENSE_DIR/$license >> $_LICENSE_FILE
+		echo >> $_LICENSE_FILE
+		echo >> $_LICENSE_FILE
+		echo >> $_LICENSE_FILE
+	fi
+	rm -rf $_LICENSE_DIR/$license
+done
+echo "</xmp>" >> $_LICENSE_FILE
+echo "</body>" >> $_LICENSE_FILE
+echo "</html>" >> $_LICENSE_FILE
+
