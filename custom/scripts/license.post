@@ -22,7 +22,7 @@ do
 		echo >> $_LICENSE_FILE
 		echo >> $_LICENSE_FILE
 	fi
-#rm -rf $_LICENSE_DIR/$license
+rm -rf $_LICENSE_DIR/$license
 done
 echo "</xmp>" >> $_LICENSE_FILE
 echo "</body>" >> $_LICENSE_FILE
