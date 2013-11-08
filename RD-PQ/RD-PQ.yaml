@@ -38,6 +38,7 @@ PrePackages:
 PostScripts:
     - Tizen-common
     - M0
+    - license
 
 NoChrootScripts:
     - smack
