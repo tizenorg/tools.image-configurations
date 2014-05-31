@@ -1,0 +1,5 @@
+/etc/make_info_file.sh Wearable-Emulator Tizen_2.3.0-Wearable-Emulator_`date +%Y%m%d.%H%M`
+
+#define platform
+echo -n 'i586-tizen-linux' > /etc/rpm/platform
+

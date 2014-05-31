@@ -1,0 +1,69 @@
+echo 'kickstart post script start'
+
+rm -rf /usr/include
+rm -rf /usr/share/man
+rm -rf /usr/share/doc
+
+ldconfig
+
+if [ ! -L var ]; then
+        [ -d opt ] || mkdir opt
+        cp -af var opt
+        rm -rf var
+        ln -snf opt/var var
+        rm -rf opt/var/run
+        ln -snf /run opt/var/run
+fi
+rm -f /var/lib/rpm/__db*
+rpmdb --rebuilddb
+rm -rf /var/lib/rpmrebuilddb*
+
+LICENSE_DIR=/usr/share/license
+LICENSE_FILE=/usr/share/license.html
+MD5_TEMP_FILE=/usr/share/temp_license_md5
+
+if [[ -f $LICENSE_FILE ]]; then
+        rm -f $LICENSE_FILE
+fi
+
+LICENSE_LIST=`ls $LICENSE_DIR`
+
+if [[ -f $MD5_TEMP_FILE ]]; then
+        rm -f $MD5_TEMP_FILE
+fi
+
+cd $LICENSE_DIR
+
+for INPUT in $LICENSE_LIST; do
+        if [[ -f $INPUT ]]; then
+                md5sum $INPUT >> $MD5_TEMP_FILE
+        fi
+done
+
+MD5_LIST=`cat $MD5_TEMP_FILE|awk '{print $1}'|sort -u`
+
+echo "<html>" >> $LICENSE_FILE
+echo "<head>" >> $LICENSE_FILE
+echo "<meta name=\"viewport\" content=\"initial-scale=1.0\">" >> $LICENSE_FILE
+echo "</head>" >> $LICENSE_FILE
+echo "<body>" >> $LICENSE_FILE
+echo "<xmp>" >> $LICENSE_FILE
+
+for INPUT in $MD5_LIST; do
+        PKG_LIST=`cat $MD5_TEMP_FILE|grep $INPUT|awk '{print $2}'`
+        PKG_NAME=`echo $PKG_LIST|awk '{print $1}'`
+
+        echo "$PKG_LIST :" >> $LICENSE_FILE
+        cat $PKG_NAME >> $LICENSE_FILE
+        echo  >> $LICENSE_FILE
+        echo  >> $LICENSE_FILE
+        echo  >> $LICENSE_FILE
+done
+
+echo "To obtain the source code covered under above licenses, please visit http://opensource.samsung.com/ ." >> $LICENSE_FILE
+echo "</xmp>" >> $LICENSE_FILE
+echo "</body>" >> $LICENSE_FILE
+echo "</html>" >> $LICENSE_FILE
+
+rm -rf $LICENSE_DIR/* $MD5_TEMP_FILE
+@REMOVE_AGETTY@

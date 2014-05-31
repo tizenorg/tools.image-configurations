@@ -1,0 +1,6 @@
+# ROOT fs partition
+part / --size=512 --ondisk mmcblk0p --fstype=ext4 --label=rootfs --extoptions="-J size=16"
+# DATA partition
+part /opt/ --size=128 --ondisk mmcblk0p --fstype=ext4 --label=system-data --extoptions="-m 0"
+# UMS partition
+part /opt/usr/ --size=3000 --ondisk mmcblk0p --fstype=ext4 --label=user --extoptions="-m 0"

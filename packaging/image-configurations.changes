@@ -1,0 +1,53 @@
+* Tue Oct 30 2012 prajwal.karur.mohan@intel.com <prajwal.karur.mohan@intel.com> submit/trunk/20121012.064721@a5d93a5
+- Adding pr3 images
+
+* Wed Aug 08 2012 prajwal.karur.mohan@intel.com <prajwal.karur.mohan@intel.com> build/2012-07-27.004658@d55399e
+ -Chown /opt/home/app to app
+
+* Wed Jul 27 2012 Yin Kangkai <kangkai.yin@intel.com>
+- Remove the USB mode hack for LB.
+
+* Thu Jul 19 2012 Arron <arron.wang@intel.com>
+- Use the right option for connman
+
+* Wed Jul 18 2012 Brad Peters <brad.t.peters@intel.com> 
+- Updating pinetrail image, adding image definition and KS post section, 
+  changing partition type
+
+* Wed Jul 18 2012 Chengwei Yang <chengwei.yang@intel.com> HEAD
+- Copy enlightment configs for user app
+
+* Tue Jul 17 2012 Prajwal Mohan <prajwal.karur.mohan@intel.com> eef4b89
+- Removing image creation for handset-pinetrail-ng
+
+* Wed Jul 11 2012 Prajwal Mohan <prajwal.karur.mohan@intel.com> 3c1bb02
+- Adding pinetrail support group to pinetrail images
+
+* Mon Jul 09 2012 Yin Kangkai <kangkai.yin@intel.com> 0cfb28b
+- tizen-lb.post: fix usb-debug service file
+
+* Fri Jul 06 2012 Patrick McCarty <patrick.mccarty@linux.intel.com> ea0a9f9
+- tizen-lb post: Create /home/app for app user
+
+* Fri Jul 06 2012 anas.nashif@intel.com <anas.nashif@intel.com> 20120705.4@796e5c9
+- add new systemd based pinetrail image
+
+* Thu Jul 05 2012 Patrick McCarty <patrick.mccarty@linux.intel.com> 7ee7c4e
+- tizen-lb post: fix the systemd service filename
+
+* Thu Jul 05 2012 Prajwal Mohan <william.douglas@intel.com>
+- Updating version in spec file
+- fixing configuration.yaml to match what is in OBS. Fixing Pinetrail image along with lb.
+
+* Thu Jul 05 2012 William Douglas <william.douglas@intel.com> b4fcda8
+- Add usb-debug service file to tizen-lb post script.
+
+* Tue May 29 2012 Ryan Ware <ryan.r.ware@intel.com> c94e1a8
+- Add default Smack manifest for image-configurations.spec
+
+* Mon May 21 2012 Kim Kibum <kb0929.kim@samsung.com> b0c05de
+- Upload Tizen:Main source
+
+* Sun May 20 2012 Hyesook Choi <hs20.choi@samsung.com> 8541e5e
+- Initial empty repository
+

@@ -1,0 +1,1 @@
+echo "UDEV_PERSISTENT_STORAGE=no" >> /etc/sysconfig/udev

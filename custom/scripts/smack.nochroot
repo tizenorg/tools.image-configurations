@@ -1,0 +1,4 @@
+if [ -d /etc/smack/accesses.d ]; then
+	mkdir -p $INSTALL_ROOT/opt/etc/smack/accesses.d
+	cp -rfp /etc/smack/accesses.d/* $INSTALL_ROOT/opt/etc/smack/accesses.d/
+fi

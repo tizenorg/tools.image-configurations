@@ -1,0 +1,7 @@
+/etc/make_info_file.sh handset-blackbay Tizen_handset-blackbay_@BUILD_ID@
+
+touch /opt/etc/.debugmode
+
+cat >> /etc/os-release  << EOF
+BUILD_ID=@BUILD_ID@
+EOF

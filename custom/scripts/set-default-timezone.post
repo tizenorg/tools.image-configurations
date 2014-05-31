@@ -1,0 +1,4 @@
+
+ln -sf /usr/share/zoneinfo/Asia/Seoul /opt/etc/localtime
+rm -f /opt/etc/initial_localtime
+

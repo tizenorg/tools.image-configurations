@@ -1,0 +1,5 @@
+Repositories:
+    -   Name: Tizen
+        Url:  https://download.tizendev.org/snapshots/trunk/common/@BUILD_ID@/repos/tizen/@ARCH@/packages/
+        Options: --save  --ssl_verify=no
+
