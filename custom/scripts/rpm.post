@@ -1,2 +1,0 @@
-rm -f /var/lib/rpm/__db*
-rpm --rebuilddb

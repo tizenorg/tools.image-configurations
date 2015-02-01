@@ -1,0 +1,45 @@
+ExternalConfigs:
+  - Wearable-target
+  - Wearable-boot
+
+Default:
+    Baseline: tizen-0.0
+    FileSystem: ext4
+    Active: True
+    Language: en_US.UTF-8
+    Keyboard: us
+    SaveRepos:  True
+    Timezone: Asia/Seoul
+    RootPass: tizen
+    DefaultUser: tizen
+    DefaultUserPass: tizen
+    PartSize: 1900
+    BootloaderOptions: ""
+
+Wearable-target:
+    Part: wearable-arm
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: armv7l
+    Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
+    Repos:
+        - 2.3-wearable-target
+
+Wearable-boot:
+    Part: wearable-boot
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: armv7l
+    Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
+    Repos:
+        - 2.3-wearable-target

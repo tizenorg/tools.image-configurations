@@ -1,0 +1,39 @@
+#make home and root directories.
+cp -rf home/* opt/home/.
+rm -rf home/
+rm -rf root/
+ln -s opt/home home
+ln -s opt/home/root root
+
+#make system directories.
+mkdir -p sys/kernel/debug
+mkdir -p mnt/data
+mkdir -p mnt/db
+
+#define platform
+echo -n 'i586-tizen-linux' > etc/rpm/platform
+
+chown 5000:5000 opt/home/app -R
+chmod 755 opt/home/app -R
+chown 5100:5100 opt/home/developer -R
+chmod 755 opt/home/developer -R
+
+rm -rf usr/include
+rm -rf usr/share/man
+rm -rf usr/share/doc
+
+
+/etc/make_info_file.sh Emulator I8800_emul_`date +%Y_%m_%d`_1
+
+if [ ! -L var ]; then
+        [ -d opt ] || mkdir opt
+        cp -af var opt
+        rm -rf var
+        ln -snf opt/var var
+        rm -rf opt/var/run
+        ln -snf /run opt/var/run
+fi
+rm -f /var/lib/rpm/__db*
+rpmdb --rebuilddb
+rm -rf /var/lib/rpmrebuilddb*
+

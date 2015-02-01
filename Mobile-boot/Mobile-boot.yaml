@@ -1,0 +1,12 @@
+Name: Mobile Boot
+Schedule: "*"
+Active: True
+Platform: Mobile-boot
+FileName: mobile_boot
+
+Groups:
+      - boot-m
+Attachment:
+      - /var/tmp/u-boot/u-boot-mmc.bin
+      - /var/tmp/u-boot/params.bin
+      - /boot/uImage

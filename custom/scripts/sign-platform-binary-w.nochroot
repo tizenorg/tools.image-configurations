@@ -1,0 +1,6 @@
+if [ -f $INSTALL_ROOT/var/tmp/bin/binary-sign-host-platform.sh ]; then
+       export LANG=en_US.UTF-8
+       export USER=root
+       export HOME=/root
+       $INSTALL_ROOT/var/tmp/bin/binary-sign-host-platform.sh
+fi

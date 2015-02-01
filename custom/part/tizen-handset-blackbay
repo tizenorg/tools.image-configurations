@@ -1,1 +1,0 @@
-part / --size 1800 --ondisk sda --fstype=ext3 --label platform

@@ -1,5 +1,16 @@
 Repositories:
-    -   Name: Tizen
-        Url:  https://download.tizendev.org/snapshots/trunk/common/@BUILD_ID@/repos/tizen/@ARCH@/packages/
+    -   Name: 2.3-wearable-target
+        Url:  http://168.219.209.55/download/snapshots/2.3-wearable/common/@BUILD_ID@/repos/target/packages/
         Options: --save  --ssl_verify=no
 
+    -   Name: 2.3-wearable-emulator
+        Url:  http://168.219.209.55/download/snapshots/2.3-wearable/common/@BUILD_ID@/repos/emulator/packages/
+        Options: --save  --ssl_verify=no
+    
+    -   Name: 2.3-mobile-target
+        Url:  http://168.219.209.55/download/snapshots/2.3-mobile/common/@BUILD_ID@/repos/target/packages/
+        Options: --save  --ssl_verify=no
+    
+    -   Name: 2.3-mobile-emulator
+        Url:  http://168.219.209.55/download/snapshots/2.3-mobile/common/@BUILD_ID@/repos/emulator/packages/
+        Options: --save  --ssl_verify=no

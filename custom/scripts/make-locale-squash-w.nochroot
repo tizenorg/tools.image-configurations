@@ -1,0 +1,6 @@
+if [ -f "/usr/bin/mksquashfs" ]; then
+       find $INSTALL_ROOT/usr/apps -path "*/res/locale" -exec cp {} $INSTALL_ROOT/usr/share/ -rf \; -exec rm -rf {} \; -exec ln -s /usr/share/locale {} \;
+       find $INSTALL_ROOT/usr/ug -path "*/res/locale" -exec cp {} $INSTALL_ROOT/usr/share/  -rf \; -exec rm -rf {} \; -exec ln -s /usr/share/locale {} \;
+       /usr/bin/mksquashfs $INSTALL_ROOT/usr/share/locale $INSTALL_ROOT/usr/share/usr_share_locale.squash -comp lzo
+       rm -rf $INSTALL_ROOT/usr/share/locale/*
+fi

@@ -1,6 +1,0 @@
-# ROOT fs partition
-part / --size=3000 --ondisk mmcblk0p --fstype=ext4 --label=platform
-# DATA partition
-part /opt/ --size=3000 --ondisk mmcblk0p --fstype=ext4 --label=data
-# UMS partition
-part /opt/usr/ --size=3000 --ondisk mmcblk0p --fstype=ext4 --label=ums

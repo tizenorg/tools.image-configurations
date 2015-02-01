@@ -1,0 +1,21 @@
+Name: Wearable Target
+Schedule: "*"
+Active: True
+Platform: Wearable-target
+FileName: wearable_target
+
+Groups:
+    - target-w
+    - eng-tools-w
+PrePackages:
+    - libprivilege-control-conf
+    - rpm-security-plugin
+PostScripts:
+    - common-w
+    - make-version-info-w_target
+    - copy-access-policy
+NoChrootScripts:
+    - copy-locale-archive-w
+    - make-locale-squash-w
+    - sign-platform-binary-w
+    - backup-data

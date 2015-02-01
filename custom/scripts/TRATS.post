@@ -1,4 +1,0 @@
-# Without this line the rpm don't get the architecture right.
-echo -n 'armv7l-tizen-linux' > /etc/rpm/platform
-
-/etc/make_info_file.sh Ref.Device-210 Tizen_Ref.Device-210_`date +%Y%m%d.%H%M`

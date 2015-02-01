@@ -1,0 +1,27 @@
+Name: Mobile Emulator
+Schedule: "*"
+Active: True
+Platform: Mobile-emulator
+FileName: mobile_emulator
+
+Groups:
+    - oal-emul-m
+    - emul-m
+    - apps-common-m
+#    - apps-sdk-priv-m
+    - eng-tools-m
+    - core-m
+    - common-m
+    - emul-common-m
+    - osp-m
+    - apps-base-m
+PrePackages:
+    - libprivilege-control-conf
+    - rpm-security-plugin
+PostScripts:
+    - common-m
+    - emulator-m
+    - make-version-info-m_emulator
+    - copy-access-policy
+NoChrootScripts:
+    - backup-data
