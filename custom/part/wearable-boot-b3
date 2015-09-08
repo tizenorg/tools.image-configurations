@@ -1,0 +1,2 @@
+# Modules partition
+part /lib/modules --size=8 --ondisk mmcblk0p --fstype=ext4 --label=modules --extoptions="-m 0 -J size=1 -b 1024"

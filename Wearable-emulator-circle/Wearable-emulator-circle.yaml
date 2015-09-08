@@ -1,0 +1,19 @@
+Name: Wearable Emulator-circle
+Schedule: "*"
+Active: True
+Platform: Wearable-emulator-circle
+FileName: wearable_emulator-circle
+
+Groups:
+    - emulator-w
+    - eng-tools-w
+PrePackages:
+    - libprivilege-control-conf
+    - rpm-security-plugin
+PostScripts:
+    - common-w
+    - emulator-w
+    - make-version-info-w_emulator
+    - copy-access-policy
+NoChrootScripts:
+    - backup-data

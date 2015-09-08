@@ -1,0 +1,60 @@
+ExternalConfigs:
+  - Mobile-target
+  - Mobile-boot
+  - Mobile-bootdebug
+
+Default:
+    Baseline: tizen-0.0
+    FileSystem: ext4
+    Active: True
+    Language: en_US.UTF-8
+    Keyboard: us
+    SaveRepos:  True
+    Timezone: Asia/Seoul
+    RootPass: tizen
+    DefaultUser: tizen
+    DefaultUserPass: tizen
+    PartSize: 1900
+    BootloaderOptions: ""
+
+Mobile-target:
+    Part: mobile-arm
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: armv7l
+    Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
+    Repos:
+        - 2.3-mobile-target
+
+Mobile-boot:
+    Part: mobile-boot
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: armv7l
+    Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
+    Repos:
+        - 2.3-mobile-target
+
+Mobile-bootdebug:
+    Part: mobile-bootdebug
+    Bootloader: True
+    BootloaderAppend: "rootdelay=5"
+    BootloaderTimeout: 0
+    SaveRepos:  True
+    Desktop: None
+    DefaultUser: root
+    DefaultUserPass: ""
+    Architecture: armv7l
+    Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
+    Repos:
+        - 2.3-mobile-target

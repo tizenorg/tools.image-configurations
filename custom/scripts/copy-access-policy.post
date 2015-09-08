@@ -1,0 +1,3 @@
+if [ -e $INSTALL_ROOT/usr/bin/install-smack-policy.sh ]; then
+	$INSTALL_ROOT/usr/bin/install-smack-policy.sh
+fi

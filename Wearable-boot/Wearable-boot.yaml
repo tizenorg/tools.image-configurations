@@ -1,0 +1,11 @@
+Name: Wearable Boot
+Schedule: "*"
+Active: True
+Platform: Wearable-boot
+FileName: wearable_boot
+
+Groups:
+    - boot-w
+Attachment:
+    - /var/tmp/kernel/zImage
+    - /var/tmp/kernel/zImage-recovery

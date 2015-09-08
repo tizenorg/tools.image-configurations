@@ -1,3 +1,0 @@
-part /boot --size 32 --ondisk sdb --fstype=ext4 --label=boot
-part /opt --size 300 --ondisk sdb --fstype=ext4 --label=opt
-part / --size 2048 --ondisk sdb --fstype=ext4 --label=platform

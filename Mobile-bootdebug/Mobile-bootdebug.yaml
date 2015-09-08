@@ -1,0 +1,13 @@
+Name: Mobile Boot Debug
+Schedule: "*"
+Active: True
+Platform: Mobile-bootdebug
+FileName: mobile_bootdebug
+
+Groups:
+      - boot-debug-m
+Attachment:
+      - /var/tmp/kernel/uImage
+      - /var/tmp/kernel/vmlinux
+      - /var/tmp/kernel/config
+      - /var/tmp/kernel/System.map

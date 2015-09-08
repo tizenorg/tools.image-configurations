@@ -1,0 +1,2 @@
+# Modules partition
+part /lib/modules --size=12 --ondisk mmcblk0p --fstype=ext4 --label=modules

@@ -1,2 +1,0 @@
-# Set symlink pointing to .desktop file 
-ln -sf x-meego-ivi.desktop /usr/share/xsessions/default.desktop

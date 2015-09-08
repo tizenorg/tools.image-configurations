@@ -1,0 +1,2 @@
+# ROOT fs partition (Dummy partition)
+part / --size=1000 --ondisk mmcblk0p --fstype=ext4 --label=dummy

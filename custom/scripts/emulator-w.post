@@ -1,0 +1,3 @@
+#define platform
+echo -n 'i586-tizen-linux' > /etc/rpm/platform
+

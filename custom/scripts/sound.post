@@ -1,8 +1,0 @@
-echo "UDEV_PERSISTENT_STORAGE=no" >> /etc/sysconfig/udev
-
-echo 0 > /usr/share/check_dac
-
-rm -f /etc/rc.d/rc4.d/S01soundserver
-rm -f /etc/rc.d/rc3.d/S01soundserver
-
-mkdir -p /opt/etc/sound

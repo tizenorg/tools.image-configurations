@@ -1,0 +1,19 @@
+Name: Mobile Target
+Schedule: "*"
+Active: True
+Platform: Mobile-target
+FileName: mobile_target
+
+Groups:
+    - target-m
+#    - apps-sdk-priv-m
+    - eng-tools-m
+PrePackages:
+    - libprivilege-control-conf
+    - rpm-security-plugin
+PostScripts:
+    - common-m
+    - make-version-info-m_target
+    - copy-access-policy
+NoChrootScripts:
+    - backup-data

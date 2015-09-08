@@ -1,0 +1,2 @@
+# Boot partition
+part /lib/modules --size=20 --ondisk mmcblk0p --fstype=ext4 --label=modules
