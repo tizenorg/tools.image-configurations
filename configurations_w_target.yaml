@@ -28,7 +28,7 @@ Wearable-target:
     Architecture: armv7l
     Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3-wearable-target
+        - 2.3.1-wearable-target
 
 Wearable-boot:
     Part: wearable-boot
@@ -42,4 +42,4 @@ Wearable-boot:
     Architecture: armv7l
     Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3-wearable-target
+        - 2.3.1-wearable-target

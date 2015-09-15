@@ -27,4 +27,4 @@ Mobile-emulator:
     Architecture: ia32
     Mic2Options: -A i586 -A i686 -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3-mobile-emulator
+        - 2.3.1-mobile-emulator

@@ -29,7 +29,7 @@ Mobile-target:
     Architecture: armv7l
     Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3-mobile-target
+        - 2.3.1-mobile-target
 
 Mobile-boot:
     Part: mobile-boot
@@ -43,7 +43,7 @@ Mobile-boot:
     Architecture: armv7l
     Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3-mobile-target
+        - 2.3.1-mobile-target
 
 Mobile-bootdebug:
     Part: mobile-bootdebug
@@ -57,4 +57,4 @@ Mobile-bootdebug:
     Architecture: armv7l
     Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3-mobile-target
+        - 2.3.1-mobile-target
