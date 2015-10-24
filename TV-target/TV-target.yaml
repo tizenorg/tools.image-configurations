@@ -1,0 +1,38 @@
+Name: TV Target
+Schedule: "*"
+Active: True
+Platform: TV-target
+FileName: tv_target
+
+Groups:
+    - target-t
+    - apps-sdk-priv-t
+    - eng-tools-t
+    - hawkp-t
+
+Attachment:
+    - /var/tmp/kernel/uImage
+    - /var/tmp/kernel/dtb.bin
+    - /var/tmp/kernel/ddr.init
+    - /var/tmp/kernel/onboot.bin
+    - /var/tmp/kernel/partition.txt
+    - /var/tmp/kernel/secos_25_SBB.bin
+    - /var/tmp/kernel/secos.bin
+    - /var/tmp/kernel/secos_SBB.bin
+    - /var/tmp/kernel/seret.bin
+
+PrePackages:
+    - libprivilege-control-conf
+    - rpm-security-plugin
+
+    - setup
+    - filesystem
+    - filesystem-tizen
+
+PostScripts:
+    - common-tv
+    - make-version-info-tv_target
+    - copy-access-policy
+
+NoChrootScripts:
+    - backup-data

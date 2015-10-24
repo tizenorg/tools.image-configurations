@@ -1,0 +1,7 @@
+# ROOT fs partition
+part / --size=3200 --ondisk mmcblk0p --fstype=ext4 --label=platform --extoptions="-J size=16"
+# DATA partition
+part /opt/ --size=1536 --ondisk mmcblk0p --fstype=ext4 --label=data --extoptions="-m 0"
+#part /opt/usr/ --size=1228 --ondisk mmcblk0p --fstype=squashfs --label=data2 --squashfsoptions="-info"
+# UMS partition
+#part /opt/usr/ --size=3000 --ondisk mmcblk0p --fstype=ext4 --label=user --extoptions="-m 0"

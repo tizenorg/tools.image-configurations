@@ -1,12 +1,13 @@
-Name: Wearable Emulator
+Name: TV Emulator
 Schedule: "*"
 Active: True
-Platform: Wearable-emulator
-FileName: wearable_emulator
+Platform: TV-emulator
+FileName: tv_emulator
 
 Groups:
-    - emulator-w
-    - eng-tools-w
+    - emulator-t
+    - apps-sdk-priv-t
+    - eng-tools-t
 
 PrePackages:
     - libprivilege-control-conf
@@ -17,9 +18,9 @@ PrePackages:
     - filesystem-tizen
 
 PostScripts:
-    - common-w
-    - emulator-w
-    - make-version-info-w_emulator
+    - common-tv
+    - emulator-tv
+    - make-version-info-tv_emulator
     - copy-access-policy
 
 NoChrootScripts:

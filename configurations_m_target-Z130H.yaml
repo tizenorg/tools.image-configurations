@@ -1,5 +1,5 @@
 ExternalConfigs:
-  - Wearable-emulator-circle
+  - Mobile-target-Z130H
 
 Default:
     Baseline: tizen-0.0
@@ -15,8 +15,8 @@ Default:
     PartSize: 1900
     BootloaderOptions: ""
 
-Wearable-emulator-circle:
-    Part: tizen-emulator
+Mobile-target-Z130H:
+    Part: mobile-arm
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
     BootloaderTimeout: 0
@@ -24,7 +24,8 @@ Wearable-emulator-circle:
     Desktop: None
     DefaultUser: root
     DefaultUserPass: ""
-    Architecture: ia32
-    Mic2Options: -A i586 -A i686 -f loop --pack-to=@NAME@.tar.gz
+    Architecture: armv7l
+    Mic2Options: -v -d -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3.1-wearable-emulator-circle
+        - 2.4-mobile-target-Z130H
+        - 2.4-base

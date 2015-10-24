@@ -1,21 +1,40 @@
 Repositories:
-    -   Name: 2.3.1-wearable-target
-        Url:  http://download.tizen.org/snapshots/2.3.1-wearable/common/@BUILD_ID@/repos/target/packages/
+    -   Name: 2.4-wearable-target
+        Url:  http://168.219.209.55/download/snapshots/2.4-wearable/common/@BUILD_ID@/repos/target/packages/
         Options: --save  --ssl_verify=no
 
-
-    -   Name: 2.3.1-wearable-emulator
-        Url:  http://download.tizen.org/snapshots/2.3.1-wearable/common/@BUILD_ID@/repos/emulator/packages/
+    -   Name: 2.4-wearable-emulator
+        Url:  http://168.219.209.55/download/snapshots/2.4-wearable/common/@BUILD_ID@/repos/emulator/packages/
         Options: --save  --ssl_verify=no
 
-    -   Name: 2.3.1-wearable-emulator-circle
-        Url:  http://download.tizen.org/snapshots/2.3.1-wearable/common/@BUILD_ID@/repos/emulator-circle/packages/
+    -   Name: 2.4-mobile-target-TM1
+        Url:  http://168.219.209.55/download/snapshots/2.4-mobile-release/common/@BUILD_ID@/repos/target-TM1/packages/
         Options: --save  --ssl_verify=no
 
-    -   Name: 2.3.1-mobile-target
-        Url:  http://download.tizen.org/snapshots/2.3.1-mobile/common/@BUILD_ID@/repos/target/packages/
+    -   Name: 2.4-mobile-target-Z130H
+        Url:  http://168.219.209.55/download/snapshots/2.4-mobile-release/common/@BUILD_ID@/repos/target-Z130H/packages/
         Options: --save  --ssl_verify=no
 
-    -   Name: 2.3.1-mobile-emulator
-        Url:  http://download.tizen.org/snapshots/2.3.1-mobile/common/@BUILD_ID@/repos/emulator/packages/
+    -   Name: 2.4-mobile-target
+        Url:  http://168.219.209.55/download/snapshots/2.4-mobile-release/common/@BUILD_ID@/repos/target/packages/
+        Options: --save  --ssl_verify=no
+
+    -   Name: 2.4-mobile-emulator
+        Url:  http://168.219.209.55/download/snapshots/2.4-mobile-release/common/@BUILD_ID@/repos/emulator/packages/
+        Options: --save  --ssl_verify=no
+
+    -   Name: 2.4-tv-target
+        Url:  http://168.219.209.55/download/snapshots/2.4-tv/common/@BUILD_ID@/repos/target/packages/
+        Options: --save  --ssl_verify=no
+
+    -   Name: 2.4-tv-emulator
+        Url:  http://168.219.209.55/download/snapshots/2.4-tv/common/@BUILD_ID@/repos/emulator/packages/
+        Options: --save  --ssl_verify=no
+
+    -   Name: 2.4-base
+        Url:  http://168.219.209.55/download/snapshots/2.4-base/common/latest/repos/standard/packages/
+        Options: --save  --ssl_verify=no
+
+    -   Name: 2.4-base-emul
+        Url:  http://168.219.209.55/download/snapshots/2.4-base/common/latest/repos/emulator/packages/
         Options: --save  --ssl_verify=no

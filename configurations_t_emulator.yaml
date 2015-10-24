@@ -1,5 +1,5 @@
 ExternalConfigs:
-  - Mobile-emulator
+  - TV-emulator
 
 Default:
     Baseline: tizen-0.0
@@ -15,7 +15,7 @@ Default:
     PartSize: 1900
     BootloaderOptions: ""
 
-Mobile-emulator:
+TV-emulator:
     Part: tizen-emulator
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
@@ -27,5 +27,5 @@ Mobile-emulator:
     Architecture: ia32
     Mic2Options: -v -d -A i586 -A i686 -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.4-mobile-emulator
+        - 2.4-tv-emulator
         - 2.4-base-emul

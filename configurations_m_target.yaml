@@ -27,9 +27,10 @@ Mobile-target:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: armv7l
-    Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
+    Mic2Options: -v -d -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3.1-mobile-target
+        - 2.4-mobile-target
+        - 2.4-base
 
 Mobile-boot:
     Part: mobile-boot
@@ -41,9 +42,9 @@ Mobile-boot:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: armv7l
-    Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
+    Mic2Options: -v -d -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3.1-mobile-target
+        - 2.4-mobile-target
 
 Mobile-bootdebug:
     Part: mobile-bootdebug
@@ -55,6 +56,6 @@ Mobile-bootdebug:
     DefaultUser: root
     DefaultUserPass: ""
     Architecture: armv7l
-    Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
+    Mic2Options: -v -d -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3.1-mobile-target
+        - 2.4-mobile-target

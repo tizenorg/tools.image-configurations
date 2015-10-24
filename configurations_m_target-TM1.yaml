@@ -1,6 +1,5 @@
 ExternalConfigs:
-  - Wearable-target
-  - Wearable-boot
+  - Mobile-target-TM1
 
 Default:
     Baseline: tizen-0.0
@@ -16,23 +15,8 @@ Default:
     PartSize: 1900
     BootloaderOptions: ""
 
-Wearable-target:
-    Part: wearable-arm
-    Bootloader: True
-    BootloaderAppend: "rootdelay=5"
-    BootloaderTimeout: 0
-    SaveRepos:  True
-    Desktop: None
-    DefaultUser: root
-    DefaultUserPass: ""
-    Architecture: armv7l
-    Mic2Options: -v -d -A armv7l -f loop --shrink --pack-to=@NAME@.tar.gz
-    Repos:
-        - 2.4-wearable-target
-        - 2.4-base
-
-Wearable-boot:
-    Part: wearable-boot
+Mobile-target-TM1:
+    Part: mobile-arm
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
     BootloaderTimeout: 0
@@ -43,5 +27,5 @@ Wearable-boot:
     Architecture: armv7l
     Mic2Options: -v -d -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.4-wearable-target
+        - 2.4-mobile-target-TM1
         - 2.4-base

@@ -24,21 +24,34 @@ Create Configuration files to build Tizen images
 cp %{SOURCE1001} .
 
 %if "%{?tizen_profile_name}" == "mobile"
-	%if "%{_repository}" == "emulator"
-		kickstarter -c configurations_m_emulator.yaml -r repos.yaml -i image-configs.xml
-	%else
-		kickstarter -c configurations_m_target.yaml -r repos.yaml -i image-configs.xml
-	%endif
-%else
-	%if "%{_repository}" == "emulator"
-		kickstarter -c configurations_w_emulator.yaml -r repos.yaml -i image-configs.xml
-	%else
-		%if "%{_repository}" == "emulator-circle"
-			kickstarter -c configurations_w_emulator-circle.yaml -r repos.yaml -i image-configs.xml
-		%else
-			kickstarter -c configurations_w_target.yaml -r repos.yaml -i image-configs.xml
-		%endif
-	%endif
+  %if "%{_repository}" == "emulator"
+    kickstarter -c configurations_m_emulator.yaml -r repos.yaml -i image-configs.xml
+  %endif
+  %if "%{_repository}" == "target"
+    kickstarter -c configurations_m_target.yaml -r repos.yaml -i image-configs.xml
+  %endif
+  %if "%{_repository}" == "target-Z130H"
+    kickstarter -c configurations_m_target-Z130H.yaml -r repos.yaml -i image-configs.xml
+  %endif
+  %if "%{_repository}" == "target-TM1"
+    kickstarter -c configurations_m_target-TM1.yaml -r repos.yaml -i image-configs.xml
+  %endif
+%endif
+
+%if "%{?tizen_profile_name}" == "wearable"
+  %if "%{_repository}" == "emulator"
+    kickstarter -c configurations_w_emulator.yaml -r repos.yaml -i image-configs.xml
+  %else
+    kickstarter -c configurations_w_target.yaml -r repos.yaml -i image-configs.xml
+  %endif
+%endif
+
+%if "%{?tizen_profile_name}" == "tv"
+  %if "%{_repository}" == "emulator"
+    kickstarter -c configurations_t_emulator.yaml -r repos.yaml -i image-configs.xml
+  %else
+    kickstarter -c configurations_t_target.yaml -r repos.yaml -i image-configs.xml
+  %endif
 %endif
 
 %install

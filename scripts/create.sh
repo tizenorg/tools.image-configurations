@@ -52,7 +52,8 @@ mk_image() {
    name="${name%.ks}"
    local dirname="$(dirname "$ks")"
    rm -rf "${ID}/${dirname}/images/${name}"
-   mic create -c "$ks" --release="${ID}" "$@" 2>&1 | tee "${name}-${ID}.log"
+###   mic create -c "$ks" --release="${ID}" "$@" 2>&1 | tee "${name}-${ID}.log"
+   mic create -v -d -c "$ks" --release="${ID}" "$@" 2>&1 | tee "${name}-${ID}.log"
    if [ ! -d "${ID}/${dirname}/images/${name}" ]; then
       echo "error: no ${ID}/${dirname}/images/${name} directory created"
       return 1

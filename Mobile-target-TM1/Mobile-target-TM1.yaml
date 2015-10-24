@@ -1,13 +1,19 @@
-Name: Mobile Target
+Name: Mobile Target-TM1
 Schedule: "*"
 Active: True
-Platform: Mobile-target
-FileName: mobile_target
+Platform: Mobile-target-TM1
+FileName: mobile_target-TM1
 
 Groups:
-    - target-m
+    - target-m-TM1
     - apps-sdk-priv-m
     - eng-tools-m
+    - boot-m-TM1
+
+Attachment:
+      - /var/tmp/u-boot/u-boot-mmc.bin
+      - /var/tmp/kernel/dzImage
+      - /var/tmp/kernel/dzImage-recovery
 
 PrePackages:
     - libprivilege-control-conf
@@ -19,7 +25,7 @@ PrePackages:
 
 PostScripts:
     - common-m
-    - make-version-info-m_target
+    - make-version-info-m_target-TM1
     - copy-access-policy
 
 NoChrootScripts:

@@ -7,13 +7,20 @@ FileName: wearable_target
 Groups:
     - target-w
     - eng-tools-w
+
 PrePackages:
     - libprivilege-control-conf
     - rpm-security-plugin
+
+    - setup
+    - filesystem
+    - filesystem-tizen
+
 PostScripts:
     - common-w
     - make-version-info-w_target
     - copy-access-policy
+
 NoChrootScripts:
     - copy-locale-archive-w
     - make-locale-squash-w

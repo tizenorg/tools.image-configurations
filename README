@@ -1,3 +1,4 @@
+
 Any global changes to configurations need to be done in the 
 configurations.yaml file. Local changes need to be done in the individual yaml
 files which are organised per vertical.

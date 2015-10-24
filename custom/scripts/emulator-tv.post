@@ -22,9 +22,6 @@ rm -rf usr/include
 rm -rf usr/share/man
 rm -rf usr/share/doc
 
-
-/etc/make_info_file.sh Emulator I8800_emul_`date +%Y_%m_%d`_1
-
 if [ ! -L var ]; then
         [ -d opt ] || mkdir opt
         cp -af var opt
@@ -36,4 +33,3 @@ fi
 rm -f /var/lib/rpm/__db*
 rpmdb --rebuilddb
 rm -rf /var/lib/rpmrebuilddb*
-

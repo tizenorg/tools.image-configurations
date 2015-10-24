@@ -1,13 +1,18 @@
-Name: Mobile Target
+Name: Mobile Target-Z130H
 Schedule: "*"
 Active: True
-Platform: Mobile-target
-FileName: mobile_target
+Platform: Mobile-target-Z130H
+FileName: mobile_target-Z130H
 
 Groups:
-    - target-m
+    - target-m-Z130H
     - apps-sdk-priv-m
     - eng-tools-m
+    - boot-m-Z130H
+
+Attachment:
+      - /var/tmp/kernel/dzImage
+      - /var/tmp/kernel/dzImage-recovery
 
 PrePackages:
     - libprivilege-control-conf
@@ -19,7 +24,7 @@ PrePackages:
 
 PostScripts:
     - common-m
-    - make-version-info-m_target
+    - make-version-info-m_target-Z130H
     - copy-access-policy
 
 NoChrootScripts:
