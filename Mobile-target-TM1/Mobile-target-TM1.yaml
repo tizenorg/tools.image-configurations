@@ -13,7 +13,6 @@ Groups:
 Attachment:
       - /var/tmp/u-boot/u-boot-mmc.bin
       - /var/tmp/kernel/dzImage
-      - /var/tmp/kernel/dzImage-recovery
 
 PrePackages:
     - libprivilege-control-conf
@@ -27,6 +26,7 @@ PostScripts:
     - common-m
     - make-version-info-m_target-TM1
     - copy-access-policy
+	- mobile-adaptation-tm1
 
 NoChrootScripts:
     - backup-data
