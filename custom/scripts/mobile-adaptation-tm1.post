@@ -1,0 +1,3 @@
+rm -f /var/tmp/kernel/dzImage
+rm -f /var/tmp/kernel/dzImage-recovery
+rm -rf /var/tmp/u-boot

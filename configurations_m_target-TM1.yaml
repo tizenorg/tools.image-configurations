@@ -16,7 +16,7 @@ Default:
     BootloaderOptions: ""
 
 Mobile-target-TM1:
-    Part: mobile-arm
+    Part: mobile-arm-tm1
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
     BootloaderTimeout: 0
