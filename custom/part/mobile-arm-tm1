@@ -4,4 +4,4 @@ part / --size=2000 --ondisk mmcblk0p --fstype=ext4 --label=rootfs --extoptions="
 part /opt/ --size=312 --ondisk mmcblk0p --fstype=ext4 --label=system-data --extoptions="-m 0"
 # UMS partition
 part /opt/usr/ --size=3000 --ondisk mmcblk0p --fstype=ext4 --label=user --extoptions="-m 0"
-part /var/tmp/kernel/mod_tizen_tm1/lib/modules --size=12 --ondisk mmcblk0p --fstype=ext4 --label=modules
+part /boot/kernel/mod_tizen_tm1/lib/modules --size=12 --ondisk mmcblk0p --fstype=ext4 --label=modules
