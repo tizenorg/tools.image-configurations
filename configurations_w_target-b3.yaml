@@ -1,7 +1,6 @@
 ExternalConfigs:
-  - Mobile-target
-  - Mobile-boot
-  - Mobile-bootdebug
+  - Wearable-target-b3
+  - Wearable-boot-b3
 
 Default:
     Baseline: tizen-0.0
@@ -11,14 +10,15 @@ Default:
     Keyboard: us
     SaveRepos:  True
     Timezone: Asia/Seoul
-    RootPass: tizen
+#RootPass: tizen
+    RootPass: root
     DefaultUser: tizen
     DefaultUserPass: tizen
     PartSize: 1900
     BootloaderOptions: ""
 
-Mobile-target:
-    Part: mobile-arm
+Wearable-target-b3:
+    Part: wearable-arm
     Bootloader: True
     BootloaderAppend: "rootdelay=5"
     BootloaderTimeout: 0
@@ -29,13 +29,13 @@ Mobile-target:
     Architecture: armv7l
     Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3.1-mobile-target
+        - 2.3.1-wearable-target-b3
 
-Mobile-boot:
-    Part: mobile-boot
+Wearable-boot-b3:
+    Part: wearable-boot-b3
     Bootloader: True
-    BootloaderAppend: "rootdelay=5"
-    BootloaderTimeout: 0
+#BootloaderAppend: "rootdelay=5"
+#BootloaderTimeout: 0
     SaveRepos:  True
     Desktop: None
     DefaultUser: root
@@ -43,19 +43,4 @@ Mobile-boot:
     Architecture: armv7l
     Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
-        - 2.3.1-mobile-target
-
-Mobile-bootdebug:
-    Part: mobile-bootdebug
-    Bootloader: True
-    BootloaderAppend: "rootdelay=5"
-    BootloaderTimeout: 0
-    SaveRepos:  True
-    Desktop: None
-    DefaultUser: root
-    DefaultUserPass: ""
-    Architecture: armv7l
-    Mic2Options: -A armv7l -f loop --pack-to=@NAME@.tar.gz
-    Repos:
-        - 2.3.1-mobile-target
-
+        - 2.3.1-wearable-target-b3

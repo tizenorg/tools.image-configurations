@@ -1,21 +1,24 @@
 Repositories:
     -   Name: 2.3.1-wearable-target
-        Url:  http://download.tizen.org/snapshots/2.3.1-wearable/common/@BUILD_ID@/repos/target/packages/
+        Url:  http://10.113.136.32/download/snapshots/2.3.1-wearable/common/@BUILD_ID@/repos/target/packages/
         Options: --save  --ssl_verify=no
 
+    -   Name: 2.3.1-wearable-target-b3
+        Url:  http://10.113.136.32/download/snapshots/2.3.1-wearable/common/@BUILD_ID@/repos/target-b3/packages/
+        Options: --save  --ssl_verify=no
 
     -   Name: 2.3.1-wearable-emulator
-        Url:  http://download.tizen.org/snapshots/2.3.1-wearable/common/@BUILD_ID@/repos/emulator/packages/
+        Url:  http://10.113.136.32/download/snapshots/2.3.1-wearable/common/@BUILD_ID@/repos/emulator/packages/
         Options: --save  --ssl_verify=no
 
     -   Name: 2.3.1-wearable-emulator-circle
-        Url:  http://download.tizen.org/snapshots/2.3.1-wearable/common/@BUILD_ID@/repos/emulator-circle/packages/
+        Url:  http://10.113.136.32/download/snapshots/2.3.1-wearable/common/@BUILD_ID@/repos/emulator-circle/packages/
         Options: --save  --ssl_verify=no
 
     -   Name: 2.3.1-mobile-target
-        Url:  http://download.tizen.org/snapshots/2.3.1-mobile/common/@BUILD_ID@/repos/target/packages/
+        Url:  http://10.113.136.32/download/snapshots/2.3.1-mobile/common/@BUILD_ID@/repos/target/packages/
         Options: --save  --ssl_verify=no
 
     -   Name: 2.3.1-mobile-emulator
-        Url:  http://download.tizen.org/snapshots/2.3.1-mobile/common/@BUILD_ID@/repos/emulator/packages/
+        Url:  http://10.113.136.32/download/snapshots/2.3.1-mobile/common/@BUILD_ID@/repos/emulator/packages/
         Options: --save  --ssl_verify=no

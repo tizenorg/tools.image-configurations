@@ -36,7 +36,11 @@ cp %{SOURCE1001} .
 		%if "%{_repository}" == "emulator-circle"
 			kickstarter -c configurations_w_emulator-circle.yaml -r repos.yaml -i image-configs.xml
 		%else
-			kickstarter -c configurations_w_target.yaml -r repos.yaml -i image-configs.xml
+			%if "%{_repository}" == "target-b3"
+				kickstarter -c configurations_w_target-b3.yaml -r repos.yaml -i image-configs.xml
+			%else
+				kickstarter -c configurations_w_target.yaml -r repos.yaml -i image-configs.xml
+			%endif
 		%endif
 	%endif
 %endif
