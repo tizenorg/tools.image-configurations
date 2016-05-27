@@ -29,7 +29,7 @@ Wearable-target:
     Mic2Options: -v -d -A armv7l -f loop --shrink --pack-to=@NAME@.tar.gz
     Repos:
         - 2.4-wearable-target
-        - 2.4-base
+        - 2.4-mobile-base
 
 Wearable-boot:
     Part: wearable-boot
@@ -44,4 +44,4 @@ Wearable-boot:
     Mic2Options: -v -d -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
         - 2.4-wearable-target
-        - 2.4-base
+        - 2.4-mobile-base

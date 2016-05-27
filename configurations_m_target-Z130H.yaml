@@ -28,4 +28,4 @@ Mobile-target-Z130H:
     Mic2Options: -v -d -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
         - 2.4-mobile-target-Z130H
-        - 2.4-base
+        - 2.4-mobile-base

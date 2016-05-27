@@ -30,7 +30,7 @@ Mobile-target:
     Mic2Options: -v -d -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
         - 2.4-mobile-target
-        - 2.4-base
+        - 2.4-mobile-base
 
 Mobile-boot:
     Part: mobile-boot
