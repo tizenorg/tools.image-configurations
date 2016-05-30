@@ -28,4 +28,4 @@ TV-emulator:
     Mic2Options: -v -d -A i586 -A i686 -f loop --pack-to=@NAME@.tar.gz
     Repos:
         - 2.4-tv-emulator
-        - 2.4-mobile-base-emul
+        - 2.4-base-emul
