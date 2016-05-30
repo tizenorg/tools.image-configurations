@@ -28,4 +28,4 @@ Mobile-target-TM1:
     Mic2Options: -v -d -A armv7l -f loop --pack-to=@NAME@.tar.gz
     Repos:
         - 2.4-mobile-target-TM1
-        - 2.4-mobile-base
+        - 2.4-base
