@@ -8,19 +8,19 @@ Repositories:
         Options: --save  --ssl_verify=no
 
     -   Name: 2.4-mobile-target-TM1
-        Url:  http://download.tizen.org/snapshots/2.4-mobile-release/common/@BUILD_ID@/repos/target-TM1/packages/
+        Url:  http://download.tizen.org/snapshots/2.4-mobile/common/@BUILD_ID@/repos/target-TM1/packages/
         Options: --save  --ssl_verify=no
 
     -   Name: 2.4-mobile-target-Z130H
-        Url:  http://download.tizen.org/snapshots/2.4-mobile-release/common/@BUILD_ID@/repos/target-Z130H/packages/
+        Url:  http://download.tizen.org/snapshots/2.4-mobile/common/@BUILD_ID@/repos/target-Z130H/packages/
         Options: --save  --ssl_verify=no
 
     -   Name: 2.4-mobile-target
-        Url:  http://download.tizen.org/snapshots/2.4-mobile-release/common/@BUILD_ID@/repos/target/packages/
+        Url:  http://download.tizen.org/snapshots/2.4-mobile/common/@BUILD_ID@/repos/target/packages/
         Options: --save  --ssl_verify=no
 
     -   Name: 2.4-mobile-emulator
-        Url:  http://download.tizen.org/snapshots/2.4-mobile-release/common/@BUILD_ID@/repos/emulator/packages/
+        Url:  http://download.tizen.org/snapshots/2.4-mobile/common/@BUILD_ID@/repos/emulator/packages/
         Options: --save  --ssl_verify=no
 
     -   Name: 2.4-tv-target
